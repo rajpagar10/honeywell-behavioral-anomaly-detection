@@ -27,6 +27,27 @@ def build_parser() -> argparse.ArgumentParser:
     subparsers = parser.add_subparsers(dest="command", required=True)
     subparsers.add_parser("check-config", help="Validate and print effective configuration.")
     subparsers.add_parser("init-db", help="Initialize operational and evaluation databases.")
+    generate_parser = subparsers.add_parser(
+        "generate-data",
+        help="Generate, validate, and export a synthetic security dataset.",
+    )
+    generate_parser.add_argument(
+        "--generator-config",
+        type=Path,
+        required=True,
+        help="Generator YAML configuration path.",
+    )
+    generate_parser.add_argument(
+        "--output",
+        type=Path,
+        required=True,
+        help="Output directory for separated events, labels, profiles, and manifest.",
+    )
+    generate_parser.add_argument(
+        "--overwrite",
+        action="store_true",
+        help="Replace an existing generated dataset in the selected output directory.",
+    )
     subparsers.add_parser("serve", help="Run the FastAPI service.")
     return parser
 
@@ -52,6 +73,35 @@ def main(argv: Sequence[str] | None = None) -> int:
         applied = manager.initialize()
         print(json.dumps({"status": "initialized", "migrations_applied": applied}, indent=2))
         return 0
+    if arguments.command == "generate-data":
+        from behavioral_security.generator.config import load_generator_config
+        from behavioral_security.generator.service import generate_and_export
+
+        root = find_project_root()
+        generator_path = _resolve_cli_path(arguments.generator_config, root)
+        output_path = _resolve_cli_path(arguments.output, root)
+        generator_config = load_generator_config(generator_path)
+        summary, exported = generate_and_export(
+            generator_config,
+            output_path,
+            overwrite=arguments.overwrite,
+        )
+        print(
+            json.dumps(
+                {
+                    "summary": summary.model_dump(mode="json"),
+                    "files": {
+                        "events": str(exported.events_path),
+                        "labels": str(exported.labels_path),
+                        "profiles": str(exported.profiles_path),
+                        "manifest": str(exported.manifest_path),
+                    },
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
     if arguments.command == "serve":
         from behavioral_security.api.app import create_app
 
@@ -63,3 +113,9 @@ def main(argv: Sequence[str] | None = None) -> int:
         )
         return 0
     raise AssertionError(f"unhandled command: {arguments.command}")
+
+
+def _resolve_cli_path(path: Path, project_root: Path) -> Path:
+    """Resolve a command path against the project root."""
+
+    return path if path.is_absolute() else project_root / path

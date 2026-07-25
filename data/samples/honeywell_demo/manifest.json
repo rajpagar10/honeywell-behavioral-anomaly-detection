@@ -1,0 +1,65 @@
+{
+  "configuration": {
+    "anomaly_rate": 0.015,
+    "attack_weights": {
+      "brute_force": 1.0,
+      "credential_stuffing": 1.0,
+      "device_spoofing": 1.0,
+      "impossible_travel": 1.0,
+      "insider_drift": 1.0,
+      "lateral_movement": 1.0,
+      "low_and_slow_exfiltration": 1.0
+    },
+    "cold_start_activation_fraction": 0.65,
+    "cold_start_fraction": 0.1,
+    "dataset_name": "honeywell_behavioral_security_demo",
+    "drift_fraction": 0.15,
+    "drift_start_fraction": 0.55,
+    "duration_hours": 168,
+    "event_count": 2000,
+    "normal_failure_rate": 0.012,
+    "population": {
+      "edge_devices": 12,
+      "iot_devices": 24,
+      "service_accounts": 12,
+      "users": 60
+    },
+    "seed": 1729,
+    "start_at": "2026-01-05T00:00:00Z",
+    "warmup_fraction": 0.2
+  },
+  "separation": {
+    "ground_truth_labels": "labels.csv",
+    "labels_present_in_event_file": false,
+    "operational_events": "events.csv"
+  },
+  "summary": {
+    "anomaly_count": 30,
+    "anomaly_percentage": 1.5,
+    "class_distribution": {
+      "brute_force": 5,
+      "credential_stuffing": 5,
+      "device_spoofing": 4,
+      "impossible_travel": 4,
+      "insider_drift": 4,
+      "lateral_movement": 4,
+      "low_and_slow_exfiltration": 4,
+      "normal": 1970
+    },
+    "cold_start_entities": 11,
+    "dataset_name": "honeywell_behavioral_security_demo",
+    "drift_entities": 16,
+    "entity_count": 108,
+    "entity_distribution": {
+      "edge_device": 402,
+      "iot_device": 900,
+      "service_account": 334,
+      "user": 364
+    },
+    "event_count": 2000,
+    "first_timestamp": "2026-01-05T00:02:26.803646Z",
+    "last_timestamp": "2026-01-12T00:00:00Z",
+    "normal_count": 1970,
+    "seed": 1729
+  }
+}

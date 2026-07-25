@@ -17,13 +17,15 @@ Implemented:
 - idempotent schema migrations
 - repository and unit-of-work ports
 - deterministic random seeding
-- `check-config`, `init-db`, and `serve` CLI commands
+- configurable normal behavior for users, service accounts, IoT, and edge devices
+- all seven required attack campaigns with isolated ground truth
+- cold-start and legitimate concept-drift scenarios
+- `check-config`, `init-db`, `generate-data`, and `serve` CLI commands
 - FastAPI liveness and readiness endpoints
 - test, lint, typing, CI, and Docker foundations
 
 Intentionally deferred:
 
-- synthetic event generation and attack injection
 - behavioral profile algorithms
 - anomaly and classification models
 - risk calculation and explanation algorithms
@@ -47,6 +49,9 @@ python -m pip install -e ".[dev]"
 Copy-Item .env.example .env
 badp --config config/development.yaml check-config
 badp --config config/development.yaml init-db
+badp --config config/development.yaml generate-data `
+  --generator-config config/generator/demo.yaml `
+  --output data/samples/honeywell_demo
 badp --config config/development.yaml serve
 ```
 
@@ -60,6 +65,9 @@ python -m pip install -e ".[dev]"
 cp .env.example .env
 badp --config config/development.yaml check-config
 badp --config config/development.yaml init-db
+badp --config config/development.yaml generate-data \
+  --generator-config config/generator/demo.yaml \
+  --output data/samples/honeywell_demo
 badp --config config/development.yaml serve
 ```
 
@@ -90,6 +98,19 @@ BADP_DATABASE__OPERATIONAL_PATH=data/runtime/custom.db
 Operational and evaluation database paths must differ. Ground-truth labels are
 stored only in the evaluation database and do not exist in the online event
 schema.
+
+## Synthetic dataset
+
+The generator produces four separate artifacts:
+
+- `events.csv`: operational access features without labels;
+- `labels.csv`: event ID, attack class, campaign, and scenario metadata;
+- `profiles.json`: stable entity behavior and lifecycle metadata;
+- `manifest.json`: configuration, class distribution, and validation summary.
+
+The anomaly rate is validated between 0.5% and 3%. Generation fails unless every
+required attack can be represented. Existing exports are protected unless
+`--overwrite` is explicitly supplied.
 
 ## Quality commands
 

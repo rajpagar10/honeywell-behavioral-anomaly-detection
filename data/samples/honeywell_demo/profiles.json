@@ -1,0 +1,8078 @@
+[
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0001",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0001-laptop",
+      "user-0001-mobile"
+    ],
+    "mean_session_seconds": 2701.5328970333426,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "2b6eade5-752d-4ac0-8055-70a9692a1509",
+    "session_stddev_seconds": 256.65802810015197,
+    "source_ips": [
+      "10.10.0.1"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0002",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0002-laptop",
+      "user-0002-mobile"
+    ],
+    "mean_session_seconds": 1672.7945853818846,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "ddfd4745-dfb3-4d3f-9cf3-ae8585187709",
+    "session_stddev_seconds": 573.2970664514438,
+    "source_ips": [
+      "10.10.0.2"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0003",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0003-laptop",
+      "user-0003-mobile"
+    ],
+    "mean_session_seconds": 915.5255768896014,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "7fee0b3d-8c72-4ea7-bb15-ddffd98a5a54",
+    "session_stddev_seconds": 371.9472995069842,
+    "source_ips": [
+      "10.10.0.3"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0004",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0004-laptop",
+      "user-0004-mobile"
+    ],
+    "mean_session_seconds": 2955.722412531188,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "b7b6ba51-afee-4709-bd55-a7235ad0c9f7",
+    "session_stddev_seconds": 441.22266566693725,
+    "source_ips": [
+      "10.10.0.4"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0005",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0005-laptop",
+      "user-0005-mobile"
+    ],
+    "mean_session_seconds": 1041.6344728600518,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "9330771c-0e6e-45e8-91df-8d6566ebc528",
+    "session_stddev_seconds": 553.226393288267,
+    "source_ips": [
+      "10.10.0.5"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0006",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0006-laptop",
+      "user-0006-mobile"
+    ],
+    "mean_session_seconds": 3389.3954971330213,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "d563e8bb-fa6f-4c89-8aad-fd1df0f1f9b0",
+    "session_stddev_seconds": 555.9265020873797,
+    "source_ips": [
+      "10.10.0.6"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0007",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0007-laptop",
+      "user-0007-mobile"
+    ],
+    "mean_session_seconds": 2431.647944314672,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "01442554-f35f-4763-8c22-1c5d59e1dc56",
+    "session_stddev_seconds": 421.15210427724094,
+    "source_ips": [
+      "10.10.0.7"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0008",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0008-laptop",
+      "user-0008-mobile"
+    ],
+    "mean_session_seconds": 2016.4258384282844,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "7ad8052d-965f-4c0b-b4e9-0564daa5e050",
+    "session_stddev_seconds": 362.49953923811347,
+    "source_ips": [
+      "10.10.0.8"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0009",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0009-laptop",
+      "user-0009-mobile"
+    ],
+    "mean_session_seconds": 1471.6485222275455,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "e980c950-1c9e-4f27-a4ae-9d7546b37e4f",
+    "session_stddev_seconds": 372.1458153560318,
+    "source_ips": [
+      "10.10.0.9"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": "drift-user-0010-device",
+    "drift_login_hour_offset": -2,
+    "drift_resources": [
+      "security/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0010",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0010-laptop",
+      "user-0010-mobile"
+    ],
+    "mean_session_seconds": 1286.442495482492,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "de720020-7023-4382-b3d3-c3421b1f3967",
+    "session_stddev_seconds": 334.3559306482069,
+    "source_ips": [
+      "10.10.0.10"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0011",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0011-laptop",
+      "user-0011-mobile"
+    ],
+    "mean_session_seconds": 1057.5614614235544,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "1f2675a4-53e5-4ef5-b7c1-e6fa72c3b581",
+    "session_stddev_seconds": 396.79428507024363,
+    "source_ips": [
+      "10.10.0.11"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0012",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0012-laptop",
+      "user-0012-mobile"
+    ],
+    "mean_session_seconds": 1370.045425029815,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "6bcf2d27-5eac-45c1-88b9-bac30c427ff5",
+    "session_stddev_seconds": 424.3379349034577,
+    "source_ips": [
+      "10.10.0.12"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0013",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0013-laptop",
+      "user-0013-mobile"
+    ],
+    "mean_session_seconds": 2862.8619253255865,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "71f029db-2cde-4273-b3c8-5e0c73adc5be",
+    "session_stddev_seconds": 553.852049772785,
+    "source_ips": [
+      "10.10.0.13"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0014",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0014-laptop",
+      "user-0014-mobile"
+    ],
+    "mean_session_seconds": 2777.412847209511,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "9a052cab-8bb3-431e-babd-7cdb82a3cb90",
+    "session_stddev_seconds": 459.9907962214207,
+    "source_ips": [
+      "10.10.0.14"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0015",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0015-laptop",
+      "user-0015-mobile"
+    ],
+    "mean_session_seconds": 1080.1390116919,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "1963cf8b-fc69-4ef3-b796-63a16d42dd20",
+    "session_stddev_seconds": 379.52815983971635,
+    "source_ips": [
+      "10.10.0.15"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0016",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0016-laptop",
+      "user-0016-mobile"
+    ],
+    "mean_session_seconds": 1681.4326300193654,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "44a15951-a208-4b56-84f9-389b91a263f7",
+    "session_stddev_seconds": 193.17936492266116,
+    "source_ips": [
+      "10.10.0.16"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0017",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0017-laptop",
+      "user-0017-mobile"
+    ],
+    "mean_session_seconds": 1140.2800346252088,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "f0e2a28e-30a2-43cf-ba69-e5a6462249a5",
+    "session_stddev_seconds": 378.3495725699021,
+    "source_ips": [
+      "10.10.0.17"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0018",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0018-laptop",
+      "user-0018-mobile"
+    ],
+    "mean_session_seconds": 1944.619679788104,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "7f2ad1bb-4bf6-4d3e-aefb-d1daf4931c57",
+    "session_stddev_seconds": 180.4005799223873,
+    "source_ips": [
+      "10.10.0.18"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0019",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0019-laptop",
+      "user-0019-mobile"
+    ],
+    "mean_session_seconds": 2880.1175975468313,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "4fb7d497-1e47-401a-9610-41dfb0aa6d7e",
+    "session_stddev_seconds": 255.38168250533164,
+    "source_ips": [
+      "10.10.0.19"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0020",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0020-laptop",
+      "user-0020-mobile"
+    ],
+    "mean_session_seconds": 1391.462912105214,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "96eea435-ba2d-4667-8187-e74ae7478414",
+    "session_stddev_seconds": 422.7414720117848,
+    "source_ips": [
+      "10.10.0.20"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0021",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0021-laptop",
+      "user-0021-mobile"
+    ],
+    "mean_session_seconds": 3416.3435446545554,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "73c9480e-a0b9-4e4a-bd0e-d524cb537e82",
+    "session_stddev_seconds": 325.65822901851186,
+    "source_ips": [
+      "10.10.0.21"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0022",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0022-laptop",
+      "user-0022-mobile"
+    ],
+    "mean_session_seconds": 3228.9130777755895,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "7b7bea4b-e2bc-40d7-bfd5-b2d1b8ba8dc9",
+    "session_stddev_seconds": 534.6752551380553,
+    "source_ips": [
+      "10.10.0.22"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0023",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0023-laptop",
+      "user-0023-mobile"
+    ],
+    "mean_session_seconds": 3421.269261935594,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "b76fd0bd-0e21-4ffd-a8af-3315b5d1e59b",
+    "session_stddev_seconds": 575.5077059534924,
+    "source_ips": [
+      "10.10.0.23"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0024",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0024-laptop",
+      "user-0024-mobile"
+    ],
+    "mean_session_seconds": 2891.603818213619,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "c096605b-244a-4e9b-9e32-ef98bea45e73",
+    "session_stddev_seconds": 524.6665686273504,
+    "source_ips": [
+      "10.10.0.24"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0025",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0025-laptop",
+      "user-0025-mobile"
+    ],
+    "mean_session_seconds": 2370.9490508657345,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "ef582a3a-ab73-4296-b96d-fe24a4adbb17",
+    "session_stddev_seconds": 564.2450971420024,
+    "source_ips": [
+      "10.10.0.25"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0026",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0026-laptop",
+      "user-0026-mobile"
+    ],
+    "mean_session_seconds": 2165.8512461562614,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "0b6bdcf5-bace-4982-9372-b6aacc244122",
+    "session_stddev_seconds": 528.8260941964793,
+    "source_ips": [
+      "10.10.0.26"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0027",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0027-laptop",
+      "user-0027-mobile"
+    ],
+    "mean_session_seconds": 3313.1429094614246,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "c806afcf-a9a0-4255-a935-959b1cdaef69",
+    "session_stddev_seconds": 506.53085397763573,
+    "source_ips": [
+      "10.10.0.27"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0028",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0028-laptop",
+      "user-0028-mobile"
+    ],
+    "mean_session_seconds": 1368.3692863436127,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "4d53a513-92ce-4950-a574-a129f2bb42da",
+    "session_stddev_seconds": 498.4211180880273,
+    "source_ips": [
+      "10.10.0.28"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0029",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0029-laptop",
+      "user-0029-mobile"
+    ],
+    "mean_session_seconds": 1843.097585407546,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "1349ae25-8d36-412d-a411-be158ea39936",
+    "session_stddev_seconds": 348.7392720281214,
+    "source_ips": [
+      "10.10.0.29"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0030",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0030-laptop",
+      "user-0030-mobile"
+    ],
+    "mean_session_seconds": 2329.400097241221,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "8401b522-a03e-448d-9241-adf775f83e3c",
+    "session_stddev_seconds": 536.1945504903192,
+    "source_ips": [
+      "10.10.0.30"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0031",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0031-laptop",
+      "user-0031-mobile"
+    ],
+    "mean_session_seconds": 2135.933106294183,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "8bd09dce-9850-47a0-9cef-6dfe8fd854d1",
+    "session_stddev_seconds": 526.2405266085882,
+    "source_ips": [
+      "10.10.0.31"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0032",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0032-laptop",
+      "user-0032-mobile"
+    ],
+    "mean_session_seconds": 916.8759480436078,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "306d9b9b-0806-4bae-a4a7-194591e3eb46",
+    "session_stddev_seconds": 291.0884766218508,
+    "source_ips": [
+      "10.10.0.32"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": "drift-user-0033-device",
+    "drift_login_hour_offset": -2,
+    "drift_resources": [
+      "finance/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0033",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0033-laptop",
+      "user-0033-mobile"
+    ],
+    "mean_session_seconds": 1991.0398857532637,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "bdf6bd1d-ede4-4419-8d6a-9ec1db576429",
+    "session_stddev_seconds": 343.81958091117264,
+    "source_ips": [
+      "10.10.0.33"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0034",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0034-laptop",
+      "user-0034-mobile"
+    ],
+    "mean_session_seconds": 1923.3987955644461,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "74131311-442e-4e96-ae2a-c3308f9f0202",
+    "session_stddev_seconds": 231.7296607962595,
+    "source_ips": [
+      "10.10.0.34"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-user-0035-device",
+    "drift_login_hour_offset": -3,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0035",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0035-laptop",
+      "user-0035-mobile"
+    ],
+    "mean_session_seconds": 3144.2904423741697,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "68c7cb5a-7fd4-4a6a-8aaa-79c8886bc2e8",
+    "session_stddev_seconds": 340.30893302828133,
+    "source_ips": [
+      "10.10.0.35"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0036",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0036-laptop",
+      "user-0036-mobile"
+    ],
+    "mean_session_seconds": 3261.6753399331533,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "a771c06b-a8eb-4250-ac9d-e8aee8f471c8",
+    "session_stddev_seconds": 343.63716953653227,
+    "source_ips": [
+      "10.10.0.36"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0037",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0037-laptop",
+      "user-0037-mobile"
+    ],
+    "mean_session_seconds": 3541.3509098271757,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "145f8245-5b75-4b65-8125-c444dfc1ab57",
+    "session_stddev_seconds": 334.72653012500797,
+    "source_ips": [
+      "10.10.0.37"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0038",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0038-laptop",
+      "user-0038-mobile"
+    ],
+    "mean_session_seconds": 1305.512920699013,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "9cdb6f75-2360-4512-9755-1fc42e1a0e1c",
+    "session_stddev_seconds": 536.2196986253018,
+    "source_ips": [
+      "10.10.0.38"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0039",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0039-laptop",
+      "user-0039-mobile"
+    ],
+    "mean_session_seconds": 1280.8645157069304,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "e8e13bd0-8513-4259-ae80-8d88e8d53744",
+    "session_stddev_seconds": 227.27532520097864,
+    "source_ips": [
+      "10.10.0.39"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0040",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0040-laptop",
+      "user-0040-mobile"
+    ],
+    "mean_session_seconds": 2091.2182369244338,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "e85c0bd5-55e0-463c-b43b-13ebc6c3770e",
+    "session_stddev_seconds": 252.66817630045577,
+    "source_ips": [
+      "10.10.0.40"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-user-0041-device",
+    "drift_login_hour_offset": -2,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0041",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0041-laptop",
+      "user-0041-mobile"
+    ],
+    "mean_session_seconds": 1699.7282671433863,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "22b9432a-863c-4ccd-b56f-0a51f77117b4",
+    "session_stddev_seconds": 568.0323305959103,
+    "source_ips": [
+      "10.10.0.41"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0042",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0042-laptop",
+      "user-0042-mobile"
+    ],
+    "mean_session_seconds": 3098.2583372304493,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "7ae17749-26cc-4193-923c-48364cb0cfb3",
+    "session_stddev_seconds": 555.7116252363335,
+    "source_ips": [
+      "10.10.0.42"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0043",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0043-laptop",
+      "user-0043-mobile"
+    ],
+    "mean_session_seconds": 3274.7635465982103,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "27936a10-64af-47f1-a3a8-5f1f91b12ece",
+    "session_stddev_seconds": 282.3890223957327,
+    "source_ips": [
+      "10.10.0.43"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": "drift-user-0044-device",
+    "drift_login_hour_offset": 3,
+    "drift_resources": [
+      "operations/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0044",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0044-laptop",
+      "user-0044-mobile"
+    ],
+    "mean_session_seconds": 1986.438182281452,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "5cbcdad5-036f-4988-89e8-0de0186a11d8",
+    "session_stddev_seconds": 430.7029313384676,
+    "source_ips": [
+      "10.10.0.44"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0045",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0045-laptop",
+      "user-0045-mobile"
+    ],
+    "mean_session_seconds": 3149.5919576040046,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "779cc9d6-9aad-4b27-85a4-f045933943e7",
+    "session_stddev_seconds": 372.6366419076781,
+    "source_ips": [
+      "10.10.0.45"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0046",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0046-laptop",
+      "user-0046-mobile"
+    ],
+    "mean_session_seconds": 1309.4592466239778,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "a72ee526-162f-4b41-ac78-3a7b108fbe2b",
+    "session_stddev_seconds": 415.8920528872611,
+    "source_ips": [
+      "10.10.0.46"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0047",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0047-laptop",
+      "user-0047-mobile"
+    ],
+    "mean_session_seconds": 3187.83591521839,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "d534006c-7d49-45f9-9092-c8eee2ef4f96",
+    "session_stddev_seconds": 583.1838268884926,
+    "source_ips": [
+      "10.10.0.47"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": "drift-user-0048-device",
+    "drift_login_hour_offset": 3,
+    "drift_resources": [
+      "human-resources/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0048",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0048-laptop",
+      "user-0048-mobile"
+    ],
+    "mean_session_seconds": 2801.0936291920184,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "4f64bc88-f829-4b81-9834-fdce1f0cb6cf",
+    "session_stddev_seconds": 206.95676687236158,
+    "source_ips": [
+      "10.10.0.48"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0049",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0049-laptop",
+      "user-0049-mobile"
+    ],
+    "mean_session_seconds": 2208.1015390012435,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "bb4b78eb-34bc-4256-ae89-b9d95b0069f6",
+    "session_stddev_seconds": 568.1309989185786,
+    "source_ips": [
+      "10.10.0.49"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0050",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0050-laptop",
+      "user-0050-mobile"
+    ],
+    "mean_session_seconds": 1443.8198311986707,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "ba81392b-fc4a-40a3-8237-450c7a38b34e",
+    "session_stddev_seconds": 389.28339551053233,
+    "source_ips": [
+      "10.10.0.50"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0051",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0051-laptop",
+      "user-0051-mobile"
+    ],
+    "mean_session_seconds": 1684.9525045490218,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "c9d70875-7b27-4134-9973-511f5a5150fe",
+    "session_stddev_seconds": 271.76340485249625,
+    "source_ips": [
+      "10.10.0.51"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": "drift-user-0052-device",
+    "drift_login_hour_offset": 2,
+    "drift_resources": [
+      "security/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0052",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0052-laptop",
+      "user-0052-mobile"
+    ],
+    "mean_session_seconds": 1257.3969622687036,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "e56a27c9-7466-4f67-a10c-337e7fb89379",
+    "session_stddev_seconds": 564.8538269633368,
+    "source_ips": [
+      "10.10.0.52"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-user-0053-device",
+    "drift_login_hour_offset": 2,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0053",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0053-laptop",
+      "user-0053-mobile"
+    ],
+    "mean_session_seconds": 2175.908313795583,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "89d9c215-7b9f-4b13-a67b-6dbeadb9da86",
+    "session_stddev_seconds": 427.13725742232526,
+    "source_ips": [
+      "10.10.0.53"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0054",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0054-laptop",
+      "user-0054-mobile"
+    ],
+    "mean_session_seconds": 2359.1578281288585,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "a71a75ec-6254-445c-834b-e6457e08ffc8",
+    "session_stddev_seconds": 262.923037894947,
+    "source_ips": [
+      "10.10.0.54"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "engineering/git",
+      "engineering/build-system",
+      "engineering/telemetry",
+      "shared/document-portal"
+    ],
+    "department": "engineering",
+    "drift_device": "drift-user-0055-device",
+    "drift_login_hour_offset": 2,
+    "drift_resources": [
+      "engineering/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0055",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0055-laptop",
+      "user-0055-mobile"
+    ],
+    "mean_session_seconds": 1277.0155943818168,
+    "normal_login_hours": [
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16
+    ],
+    "profile_id": "caaceb67-3f31-4eb4-95c0-61fef27611f9",
+    "session_stddev_seconds": 306.6813013644544,
+    "source_ips": [
+      "10.10.0.55"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "operations/fleet-console",
+      "operations/work-orders",
+      "operations/site-dashboard",
+      "shared/document-portal"
+    ],
+    "department": "operations",
+    "drift_device": "drift-user-0056-device",
+    "drift_login_hour_offset": 2,
+    "drift_resources": [
+      "operations/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "user-0056",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0056-laptop",
+      "user-0056-mobile"
+    ],
+    "mean_session_seconds": 1584.4622501290323,
+    "normal_login_hours": [
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17
+    ],
+    "profile_id": "dd893d0f-166b-49da-91fb-3ed628cd379e",
+    "session_stddev_seconds": 533.3171954873137,
+    "source_ips": [
+      "10.10.0.56"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      },
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "finance/erp",
+      "finance/reporting",
+      "finance/vendor-portal",
+      "shared/document-portal"
+    ],
+    "department": "finance",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0057",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "user-0057-laptop",
+      "user-0057-mobile"
+    ],
+    "mean_session_seconds": 929.7609468769972,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "fad14f4e-7a40-4656-ba4f-d982481a0e1c",
+    "session_stddev_seconds": 479.14173395189033,
+    "source_ips": [
+      "10.10.0.57"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      },
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "security/siem",
+      "security/case-management",
+      "security/identity-console",
+      "shared/document-portal"
+    ],
+    "department": "security",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0058",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "user-0058-laptop",
+      "user-0058-mobile"
+    ],
+    "mean_session_seconds": 1831.5296917113274,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "f70eadab-7810-44ad-a176-9bb691d65a4f",
+    "session_stddev_seconds": 458.1574162690523,
+    "source_ips": [
+      "10.10.0.58"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      },
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "manufacturing/mes",
+      "manufacturing/quality",
+      "manufacturing/line-status",
+      "shared/document-portal"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0059",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "user-0059-laptop",
+      "user-0059-mobile"
+    ],
+    "mean_session_seconds": 3429.375022784839,
+    "normal_login_hours": [
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19
+    ],
+    "profile_id": "17c3cdb0-f2d5-45a9-b738-cd31b0dc2885",
+    "session_stddev_seconds": 468.8504353259058,
+    "source_ips": [
+      "10.10.0.59"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      },
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "sso",
+      "mfa"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate",
+        "open",
+        "read",
+        "logout"
+      ]
+    },
+    "common_resources": [
+      "hr/human-capital",
+      "hr/recruiting",
+      "hr/learning",
+      "shared/document-portal"
+    ],
+    "department": "human-resources",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "user-0060",
+    "entity_type": "user",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "user-0060-laptop",
+      "user-0060-mobile"
+    ],
+    "mean_session_seconds": 1858.5616902762997,
+    "normal_login_hours": [
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18
+    ],
+    "profile_id": "1f51c685-b4a2-42c8-9449-98935cc45835",
+    "session_stddev_seconds": 392.7803876885242,
+    "source_ips": [
+      "10.10.0.60"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": "drift-svc-0001-device",
+    "drift_login_hour_offset": 3,
+    "drift_resources": [
+      "platform/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "svc-0001",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "svc-0001-runtime"
+    ],
+    "mean_session_seconds": 254.38675802451039,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "17c0db99-7361-4649-b2dd-9b3fe4667f94",
+    "session_stddev_seconds": 18.517181708048803,
+    "source_ips": [
+      "10.20.0.1"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0002",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "svc-0002-runtime"
+    ],
+    "mean_session_seconds": 157.68658889044713,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "87e7cddc-1ada-4f60-a5b4-a9a0519ec3aa",
+    "session_stddev_seconds": 48.05084903365033,
+    "source_ips": [
+      "10.20.0.2"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0003",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "svc-0003-runtime"
+    ],
+    "mean_session_seconds": 67.96537049137109,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "b9b60cb7-f98a-4692-9dc8-3d6d8c227eae",
+    "session_stddev_seconds": 17.55000164635532,
+    "source_ips": [
+      "10.20.0.3"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0004",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "svc-0004-runtime"
+    ],
+    "mean_session_seconds": 94.84695939976784,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "60cff742-7a54-4674-a002-d96f0bff30a7",
+    "session_stddev_seconds": 15.96038810599278,
+    "source_ips": [
+      "10.20.0.4"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0005",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "svc-0005-runtime"
+    ],
+    "mean_session_seconds": 252.47712301685294,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "99332231-2a19-41b9-aa97-57f17f3a3ed4",
+    "session_stddev_seconds": 24.944280505309813,
+    "source_ips": [
+      "10.20.0.5"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0006",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "svc-0006-runtime"
+    ],
+    "mean_session_seconds": 221.25478871812473,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "f79ef335-7e58-42f0-b642-af2eb5a38ac1",
+    "session_stddev_seconds": 57.860260116980605,
+    "source_ips": [
+      "10.20.0.6"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0007",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "svc-0007-runtime"
+    ],
+    "mean_session_seconds": 187.77242545299896,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "0c7d5a12-f3eb-496a-9abe-1894a8e0dbc0",
+    "session_stddev_seconds": 56.21866037476899,
+    "source_ips": [
+      "10.20.0.7"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0008",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "svc-0008-runtime"
+    ],
+    "mean_session_seconds": 140.7883661372286,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "a504735a-4430-4000-aae2-fa8afdc553b3",
+    "session_stddev_seconds": 25.93051897314597,
+    "source_ips": [
+      "10.20.0.8"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0009",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "svc-0009-runtime"
+    ],
+    "mean_session_seconds": 114.71457641729853,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "e3521ff0-6aba-4796-a0fe-2d67f7fa9e0b",
+    "session_stddev_seconds": 17.137042678131767,
+    "source_ips": [
+      "10.20.0.9"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0010",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "svc-0010-runtime"
+    ],
+    "mean_session_seconds": 172.513551740637,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "14fbcf36-aa82-4e4b-9733-5c5c5bb54bda",
+    "session_stddev_seconds": 57.84257853332329,
+    "source_ips": [
+      "10.20.0.10"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0011",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "svc-0011-runtime"
+    ],
+    "mean_session_seconds": 70.50305842533523,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "b8b41d8a-7400-4959-8f4e-ba6dff66816b",
+    "session_stddev_seconds": 28.040959673488903,
+    "source_ips": [
+      "10.20.0.11"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 1.8,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "service_token",
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "token_exchange",
+        "read_config",
+        "write_metric",
+        "commit"
+      ]
+    },
+    "common_resources": [
+      "platform/service-registry",
+      "platform/secrets-broker",
+      "platform/metrics",
+      "platform/message-bus"
+    ],
+    "department": "platform",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "svc-0012",
+    "entity_type": "service_account",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "svc-0012-runtime"
+    ],
+    "mean_session_seconds": 188.92950312728348,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "cf15e185-da96-447a-909a-8aef0907e4b9",
+    "session_stddev_seconds": 40.16276294940103,
+    "source_ips": [
+      "10.20.0.12"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0001",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "iot-0001-fingerprint"
+    ],
+    "mean_session_seconds": 43.205422138867135,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "3bd19b2d-a7e4-4cb5-acb2-827c383acd3a",
+    "session_stddev_seconds": 18.63491178604746,
+    "source_ips": [
+      "10.30.0.1"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0002",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "iot-0002-fingerprint"
+    ],
+    "mean_session_seconds": 39.24471568174277,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "3abf46bc-a0de-4135-bca5-4c7c9ed71333",
+    "session_stddev_seconds": 16.076687531934432,
+    "source_ips": [
+      "10.30.0.2"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0003",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "iot-0003-fingerprint"
+    ],
+    "mean_session_seconds": 30.517039523578,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "cafc3057-b1d3-468f-a50d-aed483a4e050",
+    "session_stddev_seconds": 7.722949487133588,
+    "source_ips": [
+      "10.30.0.3"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0004",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "iot-0004-fingerprint"
+    ],
+    "mean_session_seconds": 9.014129137110634,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "33b4a263-2156-4353-bdda-605dcbe829e4",
+    "session_stddev_seconds": 10.22454614046971,
+    "source_ips": [
+      "10.30.0.4"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0005",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "iot-0005-fingerprint"
+    ],
+    "mean_session_seconds": 40.81398691711274,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "ad1b6951-7002-4d05-95e9-e365ea105bdf",
+    "session_stddev_seconds": 19.25754296688034,
+    "source_ips": [
+      "10.30.0.5"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0006",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "iot-0006-fingerprint"
+    ],
+    "mean_session_seconds": 31.498442936214087,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "6c889113-a356-4e2a-b8d6-7822810577a4",
+    "session_stddev_seconds": 12.224516710886002,
+    "source_ips": [
+      "10.30.0.6"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0007",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "iot-0007-fingerprint"
+    ],
+    "mean_session_seconds": 37.42666628843517,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "66126bc2-4b0a-4b1b-bd78-bc9ef5abab37",
+    "session_stddev_seconds": 17.349152810995122,
+    "source_ips": [
+      "10.30.0.7"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0008",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "iot-0008-fingerprint"
+    ],
+    "mean_session_seconds": 29.346379604046277,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "202a995c-5688-4e93-b20e-ec7bc5935e23",
+    "session_stddev_seconds": 15.27142300574459,
+    "source_ips": [
+      "10.30.0.8"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0009",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "iot-0009-fingerprint"
+    ],
+    "mean_session_seconds": 17.44733924480698,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "f6cb8ea7-dafb-43fa-ba20-4f6741b4c7f9",
+    "session_stddev_seconds": 4.633910976328151,
+    "source_ips": [
+      "10.30.0.9"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-iot-0010-device",
+    "drift_login_hour_offset": 3,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "iot-0010",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "iot-0010-fingerprint"
+    ],
+    "mean_session_seconds": 89.22469831828504,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "3ec1c3f8-ee68-4b74-a5d6-83b3e105f278",
+    "session_stddev_seconds": 3.428145781426255,
+    "source_ips": [
+      "10.30.0.10"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0011",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "iot-0011-fingerprint"
+    ],
+    "mean_session_seconds": 20.258528492747647,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "2305ec6b-5d32-46da-bead-225e19b33264",
+    "session_stddev_seconds": 17.689271413466216,
+    "source_ips": [
+      "10.30.0.11"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0012",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "iot-0012-fingerprint"
+    ],
+    "mean_session_seconds": 42.421611705547065,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "897ffbbf-84b0-4dd8-a72c-50ff67b941a1",
+    "session_stddev_seconds": 16.711504158179956,
+    "source_ips": [
+      "10.30.0.12"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-iot-0013-device",
+    "drift_login_hour_offset": 2,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "iot-0013",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "iot-0013-fingerprint"
+    ],
+    "mean_session_seconds": 16.043165425670246,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "57a69c63-75c4-4847-b2f8-7501da7cbaf6",
+    "session_stddev_seconds": 9.976687141776644,
+    "source_ips": [
+      "10.30.0.13"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0014",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "iot-0014-fingerprint"
+    ],
+    "mean_session_seconds": 56.08623987581188,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "730af16d-e737-4c59-a83a-afa91505a0df",
+    "session_stddev_seconds": 12.133943942899595,
+    "source_ips": [
+      "10.30.0.14"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0015",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "iot-0015-fingerprint"
+    ],
+    "mean_session_seconds": 20.403992672041895,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "1e9ed61f-ece9-42fe-96db-4923f6dc52f8",
+    "session_stddev_seconds": 3.4473818521641695,
+    "source_ips": [
+      "10.30.0.15"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0016",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "iot-0016-fingerprint"
+    ],
+    "mean_session_seconds": 43.681923646501566,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "1089f114-1923-4010-9de9-b35e3db12d90",
+    "session_stddev_seconds": 10.178763811390821,
+    "source_ips": [
+      "10.30.0.16"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0017",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "iot-0017-fingerprint"
+    ],
+    "mean_session_seconds": 67.11598014661453,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "88fa6c80-e6a0-4289-8f0b-2e76e8ed9402",
+    "session_stddev_seconds": 16.238219738241767,
+    "source_ips": [
+      "10.30.0.17"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0018",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "iot-0018-fingerprint"
+    ],
+    "mean_session_seconds": 62.82791266712556,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "66351f2e-d45f-4c74-99c9-6502b9f8d9e0",
+    "session_stddev_seconds": 6.3663627902869235,
+    "source_ips": [
+      "10.30.0.18"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0019",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "iot-0019-fingerprint"
+    ],
+    "mean_session_seconds": 36.08996326688333,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "bd8cb1c1-64c3-4b3f-84d5-88a73f4d3257",
+    "session_stddev_seconds": 16.831229594798547,
+    "source_ips": [
+      "10.30.0.19"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0020",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "iot-0020-fingerprint"
+    ],
+    "mean_session_seconds": 41.91803065316204,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "07c69fea-1d4e-44d4-8027-e1a648ab412f",
+    "session_stddev_seconds": 2.579153700134312,
+    "source_ips": [
+      "10.30.0.20"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-iot-0021-device",
+    "drift_login_hour_offset": -3,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "iot-0021",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "iot-0021-fingerprint"
+    ],
+    "mean_session_seconds": 63.22594001002674,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "c863fa0b-6160-4d3f-9d8f-023a430f0cb1",
+    "session_stddev_seconds": 7.194546172156826,
+    "source_ips": [
+      "10.30.0.21"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0022",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "iot-0022-fingerprint"
+    ],
+    "mean_session_seconds": 18.848430464193914,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "c70750e3-3b96-467a-9b3c-9335abd3f9b4",
+    "session_stddev_seconds": 14.244787765794268,
+    "source_ips": [
+      "10.30.0.22"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0023",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "iot-0023-fingerprint"
+    ],
+    "mean_session_seconds": 9.250299062517582,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "34db1c68-8121-4476-9bf0-2215477ce334",
+    "session_stddev_seconds": 10.570683286438346,
+    "source_ips": [
+      "10.30.0.23"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.4,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "publish_telemetry",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "iot/telemetry-ingest",
+      "iot/device-shadow",
+      "iot/firmware-status"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "iot-0024",
+    "entity_type": "iot_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "iot-0024-fingerprint"
+    ],
+    "mean_session_seconds": 65.1637323189955,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "250a5cde-db23-4108-98be-014ad28335c5",
+    "session_stddev_seconds": 2.397551389419328,
+    "source_ips": [
+      "10.30.0.24"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0001",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "edge-0001-fingerprint"
+    ],
+    "mean_session_seconds": 64.32390924173788,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "da3702c6-9940-473d-88b4-d1050ca2d5e5",
+    "session_stddev_seconds": 3.7422333751093326,
+    "source_ips": [
+      "10.40.0.1"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0002",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "edge-0002-fingerprint"
+    ],
+    "mean_session_seconds": 87.27983312766523,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "acb76327-8380-41c8-9eb2-fa86950b3c9f",
+    "session_stddev_seconds": 7.928417396208355,
+    "source_ips": [
+      "10.40.0.2"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0003",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "edge-0003-fingerprint"
+    ],
+    "mean_session_seconds": 24.408835352536073,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "a3df8fcd-c669-44fd-979b-b4359ad0acbe",
+    "session_stddev_seconds": 10.309729698503702,
+    "source_ips": [
+      "10.40.0.3"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0004",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "edge-0004-fingerprint"
+    ],
+    "mean_session_seconds": 43.79695858112559,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "d17a61da-9ba6-48c7-989b-da6423e19f05",
+    "session_stddev_seconds": 7.400787469744591,
+    "source_ips": [
+      "10.40.0.4"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0005",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "edge-0005-fingerprint"
+    ],
+    "mean_session_seconds": 7.05044589863107,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "1ffae878-9a63-4660-b303-1babba4e8d00",
+    "session_stddev_seconds": 12.297728903402378,
+    "source_ips": [
+      "10.40.0.5"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0006",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "edge-0006-fingerprint"
+    ],
+    "mean_session_seconds": 25.31596006295145,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "dc82dd4a-6314-4244-931b-c169022c49b7",
+    "session_stddev_seconds": 3.970502990476712,
+    "source_ips": [
+      "10.40.0.6"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-edge-0007-device",
+    "drift_login_hour_offset": 2,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "edge-0007",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "edge-0007-fingerprint"
+    ],
+    "mean_session_seconds": 29.252871697773116,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "c7706391-f767-42a6-904f-bab293a759e4",
+    "session_stddev_seconds": 6.615290826534549,
+    "source_ips": [
+      "10.40.0.7"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0008",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "edge-0008-fingerprint"
+    ],
+    "mean_session_seconds": 59.285221719903326,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "2d4e0f36-1073-4d8c-b672-498c397d4307",
+    "session_stddev_seconds": 8.20429273808681,
+    "source_ips": [
+      "10.40.0.8"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Bengaluru",
+        "country_code": "IN",
+        "latitude": 12.9716,
+        "longitude": 77.5946
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0009",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Bengaluru",
+      "country_code": "IN",
+      "latitude": 12.9716,
+      "longitude": 77.5946
+    },
+    "known_devices": [
+      "edge-0009-fingerprint"
+    ],
+    "mean_session_seconds": 62.610130986974106,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "22a79fbd-d6c5-45fc-a018-e20998bb3d70",
+    "session_stddev_seconds": 2.3965768596620824,
+    "source_ips": [
+      "10.40.0.9"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Hyderabad",
+        "country_code": "IN",
+        "latitude": 17.385,
+        "longitude": 78.4867
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": "drift-edge-0010-device",
+    "drift_login_hour_offset": -2,
+    "drift_resources": [
+      "manufacturing/collaboration",
+      "shared/analytics"
+    ],
+    "drift_start": "2026-01-08T20:24:00Z",
+    "entity_id": "edge-0010",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Hyderabad",
+      "country_code": "IN",
+      "latitude": 17.385,
+      "longitude": 78.4867
+    },
+    "known_devices": [
+      "edge-0010-fingerprint"
+    ],
+    "mean_session_seconds": 16.23827421360933,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "3c93fa8b-61ad-48b8-a8a3-844b34c567a5",
+    "session_stddev_seconds": 10.016710604965501,
+    "source_ips": [
+      "10.40.0.10"
+    ]
+  },
+  {
+    "active_after": "2026-01-09T13:12:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Pune",
+        "country_code": "IN",
+        "latitude": 18.5204,
+        "longitude": 73.8567
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": true,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0011",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Pune",
+      "country_code": "IN",
+      "latitude": 18.5204,
+      "longitude": 73.8567
+    },
+    "known_devices": [
+      "edge-0011-fingerprint"
+    ],
+    "mean_session_seconds": 35.35004266272479,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "235a5272-b750-4948-8b10-73848c648881",
+    "session_stddev_seconds": 15.39942093832836,
+    "source_ips": [
+      "10.40.0.11"
+    ]
+  },
+  {
+    "active_after": "2026-01-05T00:00:00Z",
+    "activity_weight": 2.0,
+    "allowed_locations": [
+      {
+        "city": "Chennai",
+        "country_code": "IN",
+        "latitude": 13.0827,
+        "longitude": 80.2707
+      }
+    ],
+    "authentication_methods": [
+      "certificate"
+    ],
+    "cold_start": false,
+    "command_templates": {
+      "default": [
+        "authenticate_certificate",
+        "sync",
+        "publish_batch",
+        "heartbeat"
+      ]
+    },
+    "common_resources": [
+      "edge/site-gateway",
+      "edge/configuration",
+      "edge/telemetry-relay",
+      "edge/maintenance"
+    ],
+    "department": "manufacturing",
+    "drift_device": null,
+    "drift_login_hour_offset": 0,
+    "drift_resources": [],
+    "drift_start": null,
+    "entity_id": "edge-0012",
+    "entity_type": "edge_device",
+    "home_location": {
+      "city": "Chennai",
+      "country_code": "IN",
+      "latitude": 13.0827,
+      "longitude": 80.2707
+    },
+    "known_devices": [
+      "edge-0012-fingerprint"
+    ],
+    "mean_session_seconds": 25.684143420405036,
+    "normal_login_hours": [
+      0,
+      1,
+      2,
+      3,
+      4,
+      5,
+      6,
+      7,
+      8,
+      9,
+      10,
+      11,
+      12,
+      13,
+      14,
+      15,
+      16,
+      17,
+      18,
+      19,
+      20,
+      21,
+      22,
+      23
+    ],
+    "profile_id": "0f7bf05f-5c02-492b-af2a-8d1d12fef958",
+    "session_stddev_seconds": 18.643590591943457,
+    "source_ips": [
+      "10.40.0.12"
+    ]
+  }
+]

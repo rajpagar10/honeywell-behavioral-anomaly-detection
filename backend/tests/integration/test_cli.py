@@ -4,8 +4,11 @@ import json
 from pathlib import Path
 
 import pytest
+import yaml
 
 from behavioral_security.cli import main
+
+from ..factories import make_generator_config
 
 
 def _write_config(path: Path, operational: Path, evaluation: Path) -> None:
@@ -48,3 +51,35 @@ def test_check_config_and_init_db(
     assert init_output["status"] == "initialized"
     assert operational.is_file()
     assert evaluation.is_file()
+
+
+def test_generate_data_command(tmp_path: Path, capsys: pytest.CaptureFixture[str]) -> None:
+    app_config = tmp_path / "app.yaml"
+    _write_config(
+        app_config,
+        tmp_path / "operational.db",
+        tmp_path / "evaluation.db",
+    )
+    generator_config = tmp_path / "generator.yaml"
+    generator_config.write_text(
+        yaml.safe_dump(make_generator_config().model_dump(mode="json"), sort_keys=True),
+        encoding="utf-8",
+    )
+    output = tmp_path / "generated"
+
+    result = main(
+        [
+            "--config",
+            str(app_config),
+            "generate-data",
+            "--generator-config",
+            str(generator_config),
+            "--output",
+            str(output),
+        ]
+    )
+    payload = json.loads(capsys.readouterr().out)
+
+    assert result == 0
+    assert payload["summary"]["event_count"] == 400
+    assert Path(payload["files"]["events"]).is_file()

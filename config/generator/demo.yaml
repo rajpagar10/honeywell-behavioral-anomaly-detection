@@ -1,0 +1,28 @@
+dataset_name: honeywell_behavioral_security_demo
+seed: 1729
+event_count: 2000
+anomaly_rate: 0.015
+start_at: 2026-01-05T00:00:00Z
+duration_hours: 168
+
+population:
+  users: 60
+  service_accounts: 12
+  iot_devices: 24
+  edge_devices: 12
+
+cold_start_fraction: 0.10
+cold_start_activation_fraction: 0.65
+drift_fraction: 0.15
+drift_start_fraction: 0.55
+warmup_fraction: 0.20
+normal_failure_rate: 0.012
+
+attack_weights:
+  brute_force: 1.0
+  impossible_travel: 1.0
+  credential_stuffing: 1.0
+  lateral_movement: 1.0
+  device_spoofing: 1.0
+  low_and_slow_exfiltration: 1.0
+  insider_drift: 1.0
