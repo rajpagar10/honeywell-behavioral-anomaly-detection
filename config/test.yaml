@@ -1,0 +1,26 @@
+runtime:
+  environment: test
+  debug: false
+
+api:
+  title: Behavioral Security Platform Test API
+  host: 127.0.0.1
+  port: 8001
+  prefix: /api/v1
+  docs_enabled: false
+  cors_origins: []
+
+database:
+  operational_path: data/runtime/test-operational.db
+  evaluation_path: data/evaluation/test-ground-truth.db
+  busy_timeout_ms: 1000
+  wal_enabled: false
+
+logging:
+  level: WARNING
+  format: console
+  service_name: behavioral-security-test
+
+randomness:
+  seed: 1729
+  deterministic_torch: true

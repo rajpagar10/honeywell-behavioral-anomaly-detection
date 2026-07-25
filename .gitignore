@@ -1,0 +1,32 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.mypy_cache/
+.ruff_cache/
+.coverage
+htmlcov/
+
+# Environments
+.venv/
+venv/
+
+# Runtime configuration and secrets
+.env
+.env.*
+!.env.example
+
+# Runtime state and artifacts
+data/runtime/
+data/evaluation/
+data/raw/
+data/processed/
+artifacts/*
+!artifacts/.gitkeep
+
+# Editors and operating systems
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db

@@ -1,0 +1,13 @@
+"""Stable application and schema constants."""
+
+APP_NAME = "Behavioral Security Platform"
+APP_VERSION = "0.2.0"
+API_VERSION = "v1"
+EVENT_SCHEMA_VERSION = "1.0"
+PROFILE_SCHEMA_VERSION = "1.0"
+FEATURE_SCHEMA_VERSION = "1.0"
+MIN_RISK_SCORE = 0.0
+MAX_RISK_SCORE = 100.0
+MIN_CONFIDENCE = 0.0
+MAX_CONFIDENCE = 1.0
+ENV_PREFIX = "BADP_"

@@ -1,0 +1,26 @@
+runtime:
+  environment: production
+  debug: false
+
+api:
+  title: Behavioral Security Platform API
+  host: 0.0.0.0
+  port: 8000
+  prefix: /api/v1
+  docs_enabled: true
+  cors_origins: []
+
+database:
+  operational_path: data/runtime/behavioral_security.db
+  evaluation_path: data/evaluation/ground_truth.db
+  busy_timeout_ms: 5000
+  wal_enabled: true
+
+logging:
+  level: INFO
+  format: json
+  service_name: behavioral-security-api
+
+randomness:
+  seed: 1729
+  deterministic_torch: true

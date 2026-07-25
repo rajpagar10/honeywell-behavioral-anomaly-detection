@@ -1,0 +1,18 @@
+services:
+  api:
+    build:
+      context: .
+      dockerfile: docker/backend.Dockerfile
+    environment:
+      BADP_CONFIG_FILE: config/base.yaml
+      BADP_DATABASE__OPERATIONAL_PATH: /var/lib/badp/runtime/behavioral_security.db
+      BADP_DATABASE__EVALUATION_PATH: /var/lib/badp/evaluation/ground_truth.db
+      BADP_LOGGING__FORMAT: json
+    ports:
+      - "8000:8000"
+    volumes:
+      - badp-data:/var/lib/badp
+    restart: unless-stopped
+
+volumes:
+  badp-data:
