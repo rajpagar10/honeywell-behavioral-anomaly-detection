@@ -1,13 +1,10 @@
-# Operational Scripts
+# Demo scripts
 
-The installed `badp` command is the supported operational interface. Milestone
-3 adds real dataset generation through:
+- Windows: `powershell -ExecutionPolicy Bypass -File scripts/run_demo.ps1`
+- Linux/macOS: `bash scripts/run_demo.sh`
+- Windows stop: `powershell -ExecutionPolicy Bypass -File scripts/stop_demo.ps1`
+- Linux/macOS stop: `bash scripts/stop_demo.sh`
 
-```text
-badp --config config/development.yaml generate-data \
-  --generator-config config/generator/demo.yaml \
-  --output data/samples/honeywell_demo
-```
-
-Model training, evaluation, and streaming scripts will be added with their
-owning milestones rather than as nonfunctional stubs.
+The run script installs the lightweight ML/dashboard dependencies, validates or
+generates data, trains the fast model, initializes SQLite, starts the API and
+dashboard, and launches a full replay with the demo alert threshold.

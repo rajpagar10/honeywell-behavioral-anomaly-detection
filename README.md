@@ -1,176 +1,176 @@
-# Behavioral Security Platform
+# Honeywell Behavioral Anomaly Detection Platform
 
-Enterprise-grade foundation for an AI-powered behavioral anomaly detection and
-SOC investigation platform. The system is being delivered through
-approval-gated milestones; Milestone 2 establishes validated domain contracts,
-configuration, persistence schemas, CLI tooling, and API health endpoints.
+An explainable, near-real-time behavioral security platform built for the
+Honeywell Campus Connect Hackathon. It models normal user and device activity,
+detects unknown and known attacks, ranks alerts by operational risk, and gives
+SOC analysts evidence-backed explanations and recommended actions.
 
-## Current scope
+## Problem
 
-Implemented:
+Static security rules miss novel behavior and often overwhelm analysts with
+false positives. Industrial enterprises also have heterogeneous identities:
+employees, service accounts, IoT devices, and edge systems. Each requires an
+individual baseline while still supporting new entities and legitimate change.
 
-- Clean Architecture package boundaries
-- typed YAML, dotenv, and environment configuration
-- structured JSON or console logging
-- validated access-event, profile, detection, alert, risk, and feedback models
-- isolated operational and ground-truth SQLite databases
-- idempotent schema migrations
-- repository and unit-of-work ports
-- deterministic random seeding
-- configurable normal behavior for users, service accounts, IoT, and edge devices
-- all seven required attack campaigns with isolated ground truth
-- cold-start and legitimate concept-drift scenarios
-- `check-config`, `init-db`, `generate-data`, and `serve` CLI commands
-- FastAPI liveness and readiness endpoints
-- test, lint, typing, CI, and Docker foundations
+## Solution
 
-Intentionally deferred:
+- Realistic sequential synthetic access logs with separate ground truth
+- Per-entity, department, entity-type, and organization behavioral profiles
+- Sequential features using prior events, transitions, rolling failures, travel,
+  device novelty, and cumulative transfer behavior
+- Isolation Forest for unknown anomalies
+- Deterministic sequence rules for seven attack families
+- Class-weighted Random Forest attack classification
+- Explainable 0–100 risk scoring and ranked alerts
+- Cold-start confidence reduction with peer baselines
+- Trusted exponential-decay updates for concept drift
+- SQLite-backed replay, FastAPI, and a dark Streamlit SOC dashboard
 
-- behavioral profile algorithms
-- anomaly and classification models
-- risk calculation and explanation algorithms
-- event streaming and Streamlit dashboard
+## Architecture
 
-## Prerequisites
+```mermaid
+flowchart LR
+  G["Synthetic generator"] --> D["Events + isolated labels"]
+  D --> P["Behavioral profiles"]
+  P --> F["Sequential feature engineering"]
+  F --> I["Isolation Forest"]
+  F --> R["Sequence rules"]
+  F --> C["Random Forest classifier"]
+  I --> S["Explainable risk policy"]
+  R --> S
+  C --> S
+  S --> Q["SQLite events and alerts"]
+  Q --> A["FastAPI"]
+  A --> U["Streamlit SOC dashboard"]
+```
 
-- Python 3.11 or 3.12
-- Git
-- Docker with Compose, if using the container workflow
+The online event path never reads ground-truth labels. Labels are joined only
+inside evaluation commands.
 
-## Local setup
+## Quick start
 
-PowerShell:
+Prerequisites: Python 3.11 or 3.12 and Git.
+
+```bash
+python -m venv .venv
+# Windows: .\.venv\Scripts\Activate.ps1
+# Linux/macOS: source .venv/bin/activate
+python -m pip install --upgrade pip
+python -m pip install -e ".[dev,ml,dashboard]"
+```
+
+Copy `.env.example` to `.env` if environment overrides are needed.
+
+### One-command demo
+
+Windows:
 
 ```powershell
-py -3.12 -m venv .venv
-.\.venv\Scripts\Activate.ps1
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-Copy-Item .env.example .env
-badp --config config/development.yaml check-config
-badp --config config/development.yaml init-db
-badp --config config/development.yaml generate-data `
-  --generator-config config/generator/demo.yaml `
-  --output data/samples/honeywell_demo
-badp --config config/development.yaml serve
+powershell -ExecutionPolicy Bypass -File scripts/run_demo.ps1
 ```
 
-Linux or macOS:
+Linux/macOS:
 
 ```bash
-python3.11 -m venv .venv
-source .venv/bin/activate
-python -m pip install --upgrade pip
-python -m pip install -e ".[dev]"
-cp .env.example .env
-badp --config config/development.yaml check-config
-badp --config config/development.yaml init-db
-badp --config config/development.yaml generate-data \
-  --generator-config config/generator/demo.yaml \
-  --output data/samples/honeywell_demo
-badp --config config/development.yaml serve
+bash scripts/run_demo.sh
 ```
 
-Open:
+Open <http://127.0.0.1:8501>. The script validates data, trains the fast model,
+initializes SQLite, starts the API and dashboard, and replays all 2,000 events.
 
-- API health: <http://127.0.0.1:8000/health>
-- dependency readiness: <http://127.0.0.1:8000/ready>
-- OpenAPI documentation: <http://127.0.0.1:8000/docs>
-
-## Configuration
-
-Settings load in this order, from highest to lowest priority:
-
-1. process environment variables;
-2. values in `.env`;
-3. the selected YAML configuration;
-4. typed defaults.
-
-Use `BADP_CONFIG_FILE` to select a YAML file. Nested overrides use a double
-underscore:
-
-```text
-BADP_API__PORT=9000
-BADP_LOGGING__LEVEL=DEBUG
-BADP_DATABASE__OPERATIONAL_PATH=data/runtime/custom.db
-```
-
-Operational and evaluation database paths must differ. Ground-truth labels are
-stored only in the evaluation database and do not exist in the online event
-schema.
-
-## Synthetic dataset
-
-The generator produces four separate artifacts:
-
-- `events.csv`: operational access features without labels;
-- `labels.csv`: event ID, attack class, campaign, and scenario metadata;
-- `profiles.json`: stable entity behavior and lifecycle metadata;
-- `manifest.json`: configuration, class distribution, and validation summary.
-
-The anomaly rate is validated between 0.5% and 3%. Generation fails unless every
-required attack can be represented. Existing exports are protected unless
-`--overwrite` is explicitly supplied.
-
-## Behavioral model pipeline
+## Manual commands
 
 ```bash
+badp generate-data --generator-config config/generator/demo.yaml --output data/samples/honeywell_demo
 badp train-model --dataset data/samples/honeywell_demo --training-config config/training/fast.yaml --output artifacts/models/fast
 badp evaluate-model --dataset data/samples/honeywell_demo --model artifacts/models/fast/model.joblib --output artifacts/models/fast/full-evaluation.json
-badp infer --events data/samples/honeywell_demo/events.csv --model artifacts/models/fast/model.joblib --output artifacts/models/fast/inference.csv
+badp serve
+streamlit run dashboard/app.py
 ```
 
-The MVP combines per-entity and peer profiles, sequential rolling features,
-Isolation Forest, deterministic attack rules, and class-weighted Random Forest
-classification. Use `config/training/default.yaml` for the full preset.
-
-## Quality commands
+Start replay:
 
 ```bash
-ruff format .
+curl -X POST http://127.0.0.1:8000/api/v1/replay/start \
+  -H "Content-Type: application/json" \
+  -d '{"interval_ms":25,"max_events":2000}'
+```
+
+API docs: <http://127.0.0.1:8000/docs>
+
+## Detection and risk scoring
+
+The feature set includes login-hour deviation, device and source novelty,
+geographic distance and velocity, unusual resources, failure frequency,
+session-duration deviation, transition rarity, time since prior activity,
+cumulative transfer volume, and entity history.
+
+The risk policy combines anomaly confidence, classification confidence,
+deterministic rule evidence, behavioral deviation, resource sensitivity, device
+novelty, geographic anomaly, and historical behavior. Every alert contains
+contributing factors, a concise deterministic explanation, and analyst actions.
+
+## Cold start and concept drift
+
+Entities with insufficient history use department, entity-type, then
+organization baselines. Their confidence is reduced and alerts are marked
+`cold_start`. Recent trusted behavior updates an exponential-decay baseline.
+Anomalous events never update it, preventing baseline poisoning. Alerts and
+entity views expose `warming_up`, `stable`, `adapting`, or `drifting` status.
+
+## Evaluation
+
+Fast-preset held-out results on the committed 2,000-event demo dataset:
+
+| Metric | Result |
+|---|---:|
+| Precision | 64.29% |
+| Recall | 100.00% |
+| F1 | 78.26% |
+| PR-AUC | 57.71% |
+| False-positive rate | 0.85% |
+| Top-1% precision | 50.00% |
+| Top-1% recall | 33.33% |
+
+All seven attack categories appear in per-attack output. Detailed sample results
+are in [`submission/results/metrics.json`](submission/results/metrics.json).
+
+## Dashboard
+
+The analyst interface includes executive metrics, live events, risk-ranked
+alerts, risk and attack distributions, risky entities, alert explanations,
+recommended response actions, entity behavioral history, cold-start/drift
+indicators, evaluation metrics, confusion matrix, and system health.
+
+## Testing
+
+```bash
+ruff format --check .
 ruff check .
 mypy
 pytest
 ```
 
-The coverage gate is 85% for the current Python package. Source files are
-limited to 400 lines by an architecture test.
+GitHub Actions runs the same quality checks on every push.
 
-## Docker
+## Repository map
 
-```bash
-docker compose build
-docker compose up
-```
+- `backend/src/behavioral_security/`: domain, ML, API, replay, and persistence
+- `dashboard/`: Streamlit analyst dashboard
+- `config/`: runtime, generator, and training presets
+- `data/samples/honeywell_demo/`: bounded 2,000-event demonstration dataset
+- `scripts/`: one-command demo and shutdown scripts
+- `submission/`: report, presentation content, architecture, and sample results
 
-The container runs as a non-root user, persists SQLite files in a named volume,
-and reports readiness through the `/ready` health check. Dashboard and simulator
-containers will be added only when those applications are implemented.
+## Limitations
 
-## Repository layout
+- Synthetic data cannot reproduce every enterprise network dependency.
+- The demo model is trained on a small, intentionally imbalanced dataset.
+- Replay state is local SQLite and designed for a single demo process.
+- Authentication, RBAC, distributed streaming, model signing, and analyst
+  feedback retraining are production follow-on work.
+- Deep sequence models were intentionally excluded for reliability and speed;
+  rolling and transition features provide the sequence-aware MVP.
 
-```text
-backend/src/behavioral_security/
-├── api/                 FastAPI presentation layer
-├── application/         use-case orchestration
-├── core/                domain models, taxonomy, and ports
-├── infrastructure/      configuration, SQLite, and observability
-├── generator/           Milestone 3 boundary
-├── profiling/           Milestone 4 boundary
-├── detection/           Milestone 5 boundary
-├── classification/      Milestone 6 boundary
-├── explainability/      Milestone 7 boundary
-├── risk/                Milestone 7 boundary
-└── streaming/           Milestone 9 boundary
-```
-
-Architecture records and requirement traceability are under
-`docs/milestone-1/`.
-
-## Security notes
-
-- Never commit `.env` or runtime databases.
-- Synthetic identities must use fictional data and reserved network ranges.
-- Model artifacts will require a trusted path and checksum before loading.
-- Production authentication and authorization are planned at the API boundary;
-  current endpoints expose health information only.
+No secrets, real identities, large checkpoints, or production network addresses
+are included.

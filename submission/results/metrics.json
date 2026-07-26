@@ -1,0 +1,30 @@
+{
+  "dataset": {
+    "events": 2000,
+    "held_out_events": 600,
+    "held_out_anomalies": 9,
+    "seed": 1729
+  },
+  "detection": {
+    "precision": 0.6428571428571429,
+    "recall": 1.0,
+    "f1_score": 0.782608695652174,
+    "pr_auc": 0.577056277056277,
+    "false_positive_rate": 0.008460236886632826,
+    "threshold": 0.96
+  },
+  "top_1_percent": {
+    "event_count": 6,
+    "precision": 0.5,
+    "recall": 0.3333333333333333
+  },
+  "per_attack_f1": {
+    "brute_force": 1.0,
+    "credential_stuffing": 1.0,
+    "device_spoofing": 0.5,
+    "impossible_travel": 0.5,
+    "insider_drift": 1.0,
+    "lateral_movement": 1.0,
+    "low_and_slow_exfiltration": 0.6666666666666666
+  }
+}

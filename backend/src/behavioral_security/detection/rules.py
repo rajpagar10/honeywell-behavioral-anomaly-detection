@@ -21,14 +21,14 @@ def _evaluate(row: dict[str, Any]) -> dict[str, object]:
     commands = {str(value) for value in row["command_sequence"]}
     failed = str(row["auth_outcome"]) == "failure"
     if failed and float(row["source_failure_entity_count"]) >= 3:
-        candidates.append((AttackType.CREDENTIAL_STUFFING, 0.98))
+        candidates.append((AttackType.CREDENTIAL_STUFFING, 0.99))
     if (
         str(row["auth_method"]) == "password"
         and float(row["new_device_indicator"]) >= 1.0
         and float(row["new_source_ip_indicator"]) >= 1.0
         and float(row["failed_attempt_frequency"]) >= 2
     ):
-        candidates.append((AttackType.BRUTE_FORCE, 0.93))
+        candidates.append((AttackType.BRUTE_FORCE, 0.98))
     if (
         float(row["travel_velocity_kph"]) > 900.0
         and float(row["geo_distance_km"]) > 500.0
@@ -48,8 +48,9 @@ def _evaluate(row: dict[str, Any]) -> dict[str, object]:
     if {"bulk_read", "export"}.issubset(commands):
         candidates.append((AttackType.INSIDER_DRIFT, 0.96))
     if (
-        float(row["new_device_indicator"]) >= 1.0
-        and float(row["new_source_ip_indicator"]) >= 1.0
+        float(row["new_device_indicator"]) >= 0.25
+        and float(row["new_source_ip_indicator"]) >= 0.25
+        and float(row["external_source_indicator"]) == 1.0
         and float(row["profile_maturity"]) >= 0.15
         and not failed
     ):

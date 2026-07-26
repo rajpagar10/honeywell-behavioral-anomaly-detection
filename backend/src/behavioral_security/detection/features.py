@@ -3,6 +3,7 @@
 from collections import defaultdict, deque
 from dataclasses import dataclass
 from datetime import timedelta
+from ipaddress import ip_address, ip_network
 from math import asin, cos, log1p, radians, sin, sqrt
 from typing import Any
 
@@ -92,6 +93,7 @@ def engineer_features(events: pd.DataFrame, profiles: ProfileStore) -> pd.DataFr
                 "new_source_ip_indicator": _new_source_ip(
                     source_ip, entity_id, profiles, known_entity
                 ),
+                "external_source_indicator": float(not _is_enterprise_private(source_ip)),
                 "geo_distance_km": min(distance, 20_000.0),
                 "travel_velocity_kph": velocity,
                 "unusual_resource_score": 1.0
@@ -166,6 +168,20 @@ def _new_source_ip(
     if not known_entity:
         return 0.25
     return float(source_ip not in profiles.known_source_ips.get(entity_id, frozenset()))
+
+
+def _is_enterprise_private(source_ip: str) -> bool:
+    """Return whether an address is inside RFC 1918 enterprise space."""
+
+    address = ip_address(source_ip)
+    return any(
+        address in network
+        for network in (
+            ip_network("10.0.0.0/8"),
+            ip_network("172.16.0.0/12"),
+            ip_network("192.168.0.0/16"),
+        )
+    )
 
 
 def _duration_deviation(row: dict[str, Any], profile: EntityProfile) -> float:
