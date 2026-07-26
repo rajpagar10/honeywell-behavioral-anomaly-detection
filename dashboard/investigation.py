@@ -153,13 +153,14 @@ def _render_alert_detail(alert: dict[str, Any], all_alerts: pd.DataFrame) -> Non
         f"{labelize(alert['attack_type'])} investigation",
         f"Alert {alert['alert_id']} · {alert['event_timestamp']}",
     )
-    metrics = st.columns(6)
-    metrics[0].metric("Risk score", f"{alert['risk_score']:.1f}")
-    metrics[1].metric("Severity", labelize(alert["severity"]))
-    metrics[2].metric("Confidence", f"{alert['classifier_confidence']:.0%}")
-    metrics[3].metric("Entity", alert["entity_id"])
-    metrics[4].metric("Baseline", labelize(alert["explanation"]["baseline_level"]))
-    metrics[5].metric("Drift", labelize(alert["drift_status"]))
+    primary_metrics = st.columns(3)
+    primary_metrics[0].metric("Risk score", f"{alert['risk_score']:.1f}")
+    primary_metrics[1].metric("Severity", labelize(alert["severity"]))
+    primary_metrics[2].metric("Confidence", f"{alert['classifier_confidence']:.0%}")
+    context_metrics = st.columns(3)
+    context_metrics[0].metric("Entity", alert["entity_id"])
+    context_metrics[1].metric("Baseline", labelize(alert["explanation"]["baseline_level"]))
+    context_metrics[2].metric("Drift", labelize(alert["drift_status"]))
 
     if alert.get("cold_start"):
         st.warning(

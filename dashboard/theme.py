@@ -40,7 +40,18 @@ def apply_theme() -> None:
           padding:16px 18px; box-shadow:0 5px 18px rgba(16,24,40,.055);
         }
         [data-testid="stMetricLabel"] { color:var(--muted); }
-        [data-testid="stMetricValue"] { color:var(--ink); font-weight:720; }
+        [data-testid="stMetricLabel"] p {
+          white-space:normal !important; overflow:visible !important;
+          text-overflow:clip !important; line-height:1.2; min-height:1.3rem;
+        }
+        [data-testid="stMetricValue"] {
+          color:var(--ink); font-weight:720; overflow:visible !important;
+        }
+        [data-testid="stMetricValue"] > div {
+          white-space:normal !important; overflow:visible !important;
+          text-overflow:clip !important; word-break:break-word;
+          font-size:clamp(1.55rem,2.2vw,2.35rem) !important; line-height:1.12;
+        }
         [data-testid="stDataFrame"] {
           border:1px solid var(--line); border-radius:12px; overflow:hidden;
         }

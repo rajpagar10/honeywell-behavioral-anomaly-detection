@@ -120,7 +120,6 @@ def render_model_performance(metrics: dict[str, Any]) -> None:
         st.warning(metrics["detail"])
         return
     top = metrics["top_1_percent"]
-    columns = st.columns(7)
     values = [
         ("Precision", metrics["precision"]),
         ("Recall", metrics["recall"]),
@@ -130,6 +129,7 @@ def render_model_performance(metrics: dict[str, Any]) -> None:
         ("Top-1% precision", top["precision"]),
         ("Top-1% recall", top["recall"]),
     ]
+    columns = [*st.columns(4), *st.columns(3)]
     for column, (label, value) in zip(columns, values, strict=True):
         column.metric(label, f"{value:.2%}")
 

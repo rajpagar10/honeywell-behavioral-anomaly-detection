@@ -35,13 +35,17 @@ def render_entity_intelligence(
     history = client.get(f"/api/v1/entities/{entity_id}?limit=200")
     drift = history["drift"]
     events = pd.DataFrame(history.get("events", []))
-    metrics = st.columns(6)
-    metrics[0].metric("Entity type", labelize(history["entity"]["entity_type"]))
-    metrics[1].metric("Cold start", "Active" if history["cold_start"] else "Cleared")
-    metrics[2].metric("Drift state", labelize(drift["status"]))
-    metrics[3].metric("Trusted updates", f"{drift['trusted_updates']:,}")
-    metrics[4].metric("Decay factor", f"{drift['decay']:.2f}")
-    metrics[5].metric("EWM deviation", f"{drift['ewm_deviation']:.3f}")
+    identity_metrics = st.columns(3)
+    identity_metrics[0].metric("Entity type", labelize(history["entity"]["entity_type"]))
+    identity_metrics[1].metric(
+        "Cold start",
+        "Active" if history["cold_start"] else "Cleared",
+    )
+    identity_metrics[2].metric("Drift state", labelize(drift["status"]))
+    adaptive_metrics = st.columns(3)
+    adaptive_metrics[0].metric("Trusted updates", f"{drift['trusted_updates']:,}")
+    adaptive_metrics[1].metric("Decay factor", f"{drift['decay']:.2f}")
+    adaptive_metrics[2].metric("EWM deviation", f"{drift['ewm_deviation']:.3f}")
 
     st.markdown(
         f'<div class="hw-callout"><strong>Adaptive baseline</strong><br>'
