@@ -152,11 +152,11 @@ cold-start/drift indicators, confusion matrices, and top-1% budget metrics.
 
 ### AI Investigation Copilot
 
-Every dashboard workspace includes a persistent right-side Investigation
-Copilot. It follows the selected alert, supports predefined analyst questions,
-and provides grounded explanations, recommended actions, a short timeline, and
-persisted analyst feedback. The detector and risk policy remain the source of
-truth. To enable the optional local model:
+Executive Overview, Alert Center, and Entity Intelligence include a persistent
+right-side Investigation Copilot. It follows the selected alert, supports
+predefined analyst questions, and provides grounded explanations, recommended
+actions, a short timeline, and persisted analyst feedback. The detector and risk
+policy remain the source of truth. To enable the optional local model:
 
 ```bash
 ollama pull llama3.1:8b

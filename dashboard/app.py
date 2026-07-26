@@ -30,6 +30,11 @@ NAVIGATION = [
     "Model Performance",
     "System Health",
 ]
+COPILOT_WORKSPACES = {
+    "Executive Overview",
+    "Alert Center",
+    "Entity Intelligence",
+}
 
 
 def _load(client: SOCAPIClient) -> dict[str, Any]:
@@ -131,16 +136,24 @@ def main() -> None:
                 language="powershell",
             )
             return
-        workspace, copilot = st.columns([3.5, 1.9], gap="large")
-        with workspace:
+        if navigation in COPILOT_WORKSPACES:
+            workspace, copilot = st.columns([3.5, 1.9], gap="large")
+            with workspace:
+                st.caption(
+                    f"{navigation} · "
+                    f"Updated {datetime.now(UTC).strftime('%H:%M:%S UTC')} · "
+                    f"{'Auto-refresh on' if auto_refresh else 'Manual refresh'}"
+                )
+                _render_view(navigation, data, client)
+            with copilot:
+                render_global_copilot(client, data["alerts"])
+        else:
             st.caption(
                 f"{navigation} · "
                 f"Updated {datetime.now(UTC).strftime('%H:%M:%S UTC')} · "
                 f"{'Auto-refresh on' if auto_refresh else 'Manual refresh'}"
             )
             _render_view(navigation, data, client)
-        with copilot:
-            render_global_copilot(client, data["alerts"])
 
     live_workspace()
 
