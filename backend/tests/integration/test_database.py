@@ -23,7 +23,7 @@ def test_database_initialization_is_idempotent(test_settings: Settings) -> None:
     first = manager.initialize()
     second = manager.initialize()
 
-    assert first == {"operational": (1,), "evaluation": (1,)}
+    assert first == {"operational": (1, 2), "evaluation": (1,)}
     assert second == {"operational": (), "evaluation": ()}
     assert all(manager.readiness().values())
 

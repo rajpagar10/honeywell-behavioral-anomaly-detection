@@ -8,11 +8,14 @@ from fastapi.middleware.cors import CORSMiddleware
 
 from behavioral_security.api.middleware import CorrelationIdMiddleware
 from behavioral_security.api.routes.health import router as health_router
+from behavioral_security.api.routes.soc import router as soc_router
+from behavioral_security.application.realtime import RealtimeSOCService
 from behavioral_security.core.constants import APP_VERSION
 from behavioral_security.core.randomness import set_global_seed
 from behavioral_security.infrastructure.config.loader import find_project_root, get_settings
 from behavioral_security.infrastructure.config.settings import Settings
 from behavioral_security.infrastructure.database.manager import DatabaseManager
+from behavioral_security.infrastructure.database.soc_repository import SOCRepository
 from behavioral_security.infrastructure.observability.logging import configure_logging
 
 
@@ -29,6 +32,11 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         resolved_settings.database,
         project_root=find_project_root(),
     )
+    soc_service = RealtimeSOCService(
+        SOCRepository(database_manager.operational),
+        resolved_settings.intelligence,
+        project_root=find_project_root(),
+    )
 
     @asynccontextmanager
     async def lifespan(app: FastAPI) -> AsyncIterator[None]:
@@ -36,7 +44,9 @@ def create_app(settings: Settings | None = None) -> FastAPI:
 
         database_manager.initialize()
         app.state.database_manager = database_manager
+        app.state.soc_service = soc_service
         yield
+        await soc_service.shutdown()
 
     docs_url = "/docs" if resolved_settings.api.docs_enabled else None
     redoc_url = "/redoc" if resolved_settings.api.docs_enabled else None
@@ -50,6 +60,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     )
     app.state.settings = resolved_settings
     app.state.database_manager = database_manager
+    app.state.soc_service = soc_service
     app.add_middleware(CorrelationIdMiddleware)
     if resolved_settings.api.cors_origins:
         app.add_middleware(
@@ -60,6 +71,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
             allow_headers=["Authorization", "Content-Type", "X-Correlation-ID"],
         )
     app.include_router(health_router)
+    app.include_router(soc_router, prefix=resolved_settings.api.prefix)
     return app
 
 

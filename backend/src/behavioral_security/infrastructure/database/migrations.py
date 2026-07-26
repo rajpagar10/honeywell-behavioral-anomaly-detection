@@ -204,6 +204,22 @@ OPERATIONAL_MIGRATIONS: Final[tuple[Migration, ...]] = (
             "CREATE INDEX idx_metrics_name_time ON system_metrics(metric_name, observed_at DESC)",
         ),
     ),
+    Migration(
+        version=2,
+        name="realtime_risk_intelligence",
+        statements=(
+            "ALTER TABLE alerts ADD COLUMN event_timestamp TEXT",
+            "ALTER TABLE alerts ADD COLUMN explanation_json TEXT NOT NULL DEFAULT '{}'",
+            "ALTER TABLE alerts ADD COLUMN recommended_actions_json TEXT NOT NULL DEFAULT '[]'",
+            "ALTER TABLE alerts ADD COLUMN cold_start INTEGER NOT NULL DEFAULT 0",
+            "ALTER TABLE alerts ADD COLUMN drift_status TEXT NOT NULL DEFAULT 'stable'",
+            "ALTER TABLE simulation_runs ADD COLUMN total_events INTEGER NOT NULL DEFAULT 0",
+            "ALTER TABLE simulation_runs ADD COLUMN processed_events INTEGER NOT NULL DEFAULT 0",
+            "ALTER TABLE simulation_runs ADD COLUMN alerts_generated INTEGER NOT NULL DEFAULT 0",
+            "ALTER TABLE simulation_runs ADD COLUMN error_message TEXT",
+            "ALTER TABLE simulation_runs ADD COLUMN updated_at TEXT",
+        ),
+    ),
 )
 
 

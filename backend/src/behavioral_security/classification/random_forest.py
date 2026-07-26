@@ -39,3 +39,11 @@ class AttackClassifier:
             np.ndarray,
             self.model.predict(features.loc[:, MODEL_FEATURES].astype(float)),
         )
+
+    def confidence(self, features: pd.DataFrame) -> np.ndarray:
+        """Return maximum class probability for each prediction."""
+
+        if self.model is None:
+            raise RuntimeError("classifier must be fitted before prediction")
+        probabilities = self.model.predict_proba(features.loc[:, MODEL_FEATURES].astype(float))
+        return cast(np.ndarray, probabilities.max(axis=1))

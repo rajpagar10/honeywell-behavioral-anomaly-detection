@@ -73,6 +73,17 @@ class RandomnessSettings(SettingsModel):
     deterministic_torch: bool = True
 
 
+class IntelligenceSettings(SettingsModel):
+    """Paths and thresholds for model-backed replay intelligence."""
+
+    model_path: Path = Path("artifacts/models/fast/model.joblib")
+    events_path: Path = Path("data/samples/honeywell_demo/events.csv")
+    metrics_path: Path = Path("artifacts/models/fast/metrics.json")
+    alert_threshold: Annotated[float, Field(ge=0.0, le=100.0)] = 55.0
+    replay_interval_ms: Annotated[int, Field(ge=0, le=60_000)] = 100
+    recent_limit: Annotated[int, Field(ge=1, le=1000)] = 100
+
+
 class Settings(SettingsModel):
     """Central validated configuration graph."""
 
@@ -81,3 +92,4 @@ class Settings(SettingsModel):
     database: DatabaseSettings = DatabaseSettings()
     logging: LoggingSettings = LoggingSettings()
     randomness: RandomnessSettings = RandomnessSettings()
+    intelligence: IntelligenceSettings = IntelligenceSettings()

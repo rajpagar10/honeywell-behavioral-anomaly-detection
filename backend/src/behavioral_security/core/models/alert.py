@@ -25,16 +25,22 @@ class ClassifiedAlert(StrictModel):
     classifier_confidence: Probability
     classifier_version: Annotated[str, Field(min_length=1, max_length=64)]
     correlation_key: Annotated[str, Field(min_length=1, max_length=256)] | None = None
+    event_timestamp: AwareDatetime | None = None
+    top_contributing_factors: tuple[str, ...] = ()
+    human_explanation: str = ""
+    recommended_actions: tuple[str, ...] = ()
+    cold_start: bool = False
+    drift_status: str = "stable"
     explanation: RiskScoreExplanation
     created_at: AwareDatetime
     updated_at: AwareDatetime
 
-    @field_validator("created_at", "updated_at")
+    @field_validator("created_at", "updated_at", "event_timestamp")
     @classmethod
-    def normalize_timestamps(cls, value: datetime) -> datetime:
+    def normalize_timestamps(cls, value: datetime | None) -> datetime | None:
         """Normalize alert timestamps to UTC."""
 
-        return value.astimezone(UTC)
+        return value.astimezone(UTC) if value is not None else None
 
     @model_validator(mode="after")
     def updated_after_creation(self) -> Self:

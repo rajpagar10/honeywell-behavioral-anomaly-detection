@@ -24,3 +24,11 @@ logging:
 randomness:
   seed: 1729
   deterministic_torch: true
+
+intelligence:
+  model_path: artifacts/models/fast/model.joblib
+  events_path: data/samples/honeywell_demo/events.csv
+  metrics_path: artifacts/models/fast/metrics.json
+  alert_threshold: 55.0
+  replay_interval_ms: 100
+  recent_limit: 100
