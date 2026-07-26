@@ -76,6 +76,9 @@ def test_training_evaluation_and_inference_pipeline(
         assert replay["status"] == "completed"
         assert replay["processed_events"] == 2000
         assert replay["alerts_generated"] > 0
+        recent_events = client.get("/api/v1/events/recent?limit=10").json()
+        assert recent_events
+        assert all(event.get("processed_at") for event in recent_events)
         alerts = client.get("/api/v1/alerts").json()
         assert alerts
         detail = client.get(f"/api/v1/alerts/{alerts[0]['alert_id']}").json()

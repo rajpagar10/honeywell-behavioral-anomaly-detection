@@ -58,20 +58,21 @@ def render_live_operations(
 
     with activity:
         section_header(
-            "Live event activity", "Latest authentication and resource-access telemetry."
+            "Live event activity",
+            "Replay-time throughput; original synthetic event time is retained separately.",
         )
         if not events:
             st.info("Events will appear here as replay progresses.")
             return
         frame = _event_frame(events)
         bucket = (
-            frame.set_index("timestamp").resample("10min").size().rename("events").reset_index()
+            frame.set_index("processed_at").resample("1s").size().rename("events").reset_index()
         )
         figure = px.bar(
             bucket,
-            x="timestamp",
+            x="processed_at",
             y="events",
-            title="Ingestion throughput",
+            title="Live ingestion throughput",
             color_discrete_sequence=[HONEYWELL_RED],
         )
         chart(figure, height=280, key="live_throughput")
@@ -106,6 +107,7 @@ def render_live_operations(
         filtered = filtered[searchable.str.contains(query, case=False, regex=False)]
 
     preferred = [
+        "processed_at",
         "timestamp",
         "entity_id",
         "entity_type",
@@ -122,7 +124,14 @@ def render_live_operations(
         hide_index=True,
         height=480,
         column_config={
-            "timestamp": st.column_config.DatetimeColumn("Event time", format="HH:mm:ss"),
+            "processed_at": st.column_config.DatetimeColumn(
+                "Processed live",
+                format="HH:mm:ss.SSS",
+            ),
+            "timestamp": st.column_config.DatetimeColumn(
+                "Synthetic event time",
+                format="YYYY-MM-DD HH:mm:ss",
+            ),
             "entity_id": "Entity",
             "entity_type": "Type",
             "auth_outcome": "Outcome",
@@ -137,9 +146,14 @@ def _event_frame(events: list[dict[str, Any]]) -> pd.DataFrame:
     """Normalize event records for filtering and timeline aggregation."""
 
     frame = pd.DataFrame(events)
+    frame["processed_at"] = pd.to_datetime(
+        frame["processed_at"],
+        utc=True,
+        format="mixed",
+    )
     frame["timestamp"] = pd.to_datetime(
         frame["timestamp"],
         utc=True,
         format="mixed",
     )
-    return frame.sort_values("timestamp", ascending=False)
+    return frame.sort_values("processed_at", ascending=False)

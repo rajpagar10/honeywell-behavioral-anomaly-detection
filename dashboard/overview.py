@@ -44,17 +44,17 @@ def render_overview(
     left, right = st.columns([1.7, 1])
     with left:
         timeline = (
-            frame.set_index("event_timestamp")
-            .resample("4h")
+            frame.set_index("detected_at")
+            .resample("1s")
             .agg(alerts=("alert_id", "count"), average_risk=("risk_score", "mean"))
             .reset_index()
         )
         figure = px.area(
             timeline,
-            x="event_timestamp",
+            x="detected_at",
             y="alerts",
             markers=True,
-            title="Alert volume over time",
+            title="Alert detections by replay time",
             color_discrete_sequence=[HONEYWELL_RED],
         )
         figure.update_traces(fillcolor="rgba(227,27,35,.12)")
@@ -118,7 +118,7 @@ def render_overview(
             max_risk=("risk_score", "max"),
             average_risk=("risk_score", "mean"),
             alert_count=("alert_id", "count"),
-            latest_alert=("event_timestamp", "max"),
+            latest_detection=("detected_at", "max"),
         )
         .sort_values(["max_risk", "alert_count"], ascending=False)
         .head(12)
@@ -130,7 +130,7 @@ def render_overview(
         column_config={
             "max_risk": st.column_config.ProgressColumn("Peak risk", min_value=0, max_value=100),
             "average_risk": st.column_config.NumberColumn("Average risk", format="%.1f"),
-            "latest_alert": st.column_config.DatetimeColumn("Latest alert"),
+            "latest_detection": st.column_config.DatetimeColumn("Latest detection"),
         },
     )
 
@@ -150,4 +150,9 @@ def _alert_frame(alerts: list[dict[str, Any]]) -> pd.DataFrame:
         utc=True,
         format="mixed",
     )
-    return frame.sort_values("event_timestamp")
+    frame["detected_at"] = pd.to_datetime(
+        frame["updated_at"],
+        utc=True,
+        format="mixed",
+    )
+    return frame.sort_values("detected_at")

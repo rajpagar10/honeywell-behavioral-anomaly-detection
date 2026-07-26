@@ -40,13 +40,32 @@ class SOCRepository:
             )
             connection.execute(
                 """
-                INSERT OR IGNORE INTO security_events(
+                INSERT INTO security_events(
                     event_id, entity_id, entity_type, event_timestamp, source_ip,
                     geo_location_json, resource_accessed, auth_method, auth_outcome,
                     session_duration, command_sequence_json, device_fingerprint,
                     department, resource_sensitivity, bytes_transferred, destination_ip,
                     schema_version, extensions_json, ingested_at
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(event_id) DO UPDATE SET
+                    entity_id=excluded.entity_id,
+                    entity_type=excluded.entity_type,
+                    event_timestamp=excluded.event_timestamp,
+                    source_ip=excluded.source_ip,
+                    geo_location_json=excluded.geo_location_json,
+                    resource_accessed=excluded.resource_accessed,
+                    auth_method=excluded.auth_method,
+                    auth_outcome=excluded.auth_outcome,
+                    session_duration=excluded.session_duration,
+                    command_sequence_json=excluded.command_sequence_json,
+                    device_fingerprint=excluded.device_fingerprint,
+                    department=excluded.department,
+                    resource_sensitivity=excluded.resource_sensitivity,
+                    bytes_transferred=excluded.bytes_transferred,
+                    destination_ip=excluded.destination_ip,
+                    schema_version=excluded.schema_version,
+                    extensions_json=excluded.extensions_json,
+                    ingested_at=excluded.ingested_at
                 """,
                 (
                     str(row["event_id"]),
@@ -214,7 +233,7 @@ class SOCRepository:
                 SELECT event_id, entity_id, entity_type, event_timestamp AS timestamp,
                        source_ip, resource_accessed, auth_method, auth_outcome,
                        session_duration, device_fingerprint, resource_sensitivity,
-                       bytes_transferred
+                       bytes_transferred, ingested_at AS processed_at
                 FROM security_events ORDER BY ingested_at DESC LIMIT ?
                 """,
                 (limit,),

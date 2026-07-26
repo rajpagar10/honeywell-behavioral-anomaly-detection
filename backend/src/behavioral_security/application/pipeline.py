@@ -39,6 +39,15 @@ class PipelineResult:
     metrics: dict[str, Any]
 
 
+@dataclass(frozen=True, slots=True)
+class DatasetSplit:
+    """Reproducible training, validation, and held-out test indices."""
+
+    train: np.ndarray
+    validation: np.ndarray
+    test: np.ndarray
+
+
 def train_and_evaluate(
     dataset_directory: Path,
     output_directory: Path,
@@ -51,23 +60,28 @@ def train_and_evaluate(
     features = engineer_features(events, profiles)
     rules = apply_sequence_rules(features)
     features = pd.concat([features, rules], axis=1)
-    train_indices, test_indices = _split_indices(features, config)
+    split = _split_indices(features, config)
     detector = IsolationForestDetector(
         estimators=config.isolation_forest_estimators,
         contamination=config.isolation_forest_contamination,
         seed=config.seed,
     )
-    normal_train = features.iloc[train_indices]
+    normal_train = features.iloc[split.train]
     normal_train = normal_train[normal_train["label"] == "normal"]
     detector.fit(normal_train)
     classifier = AttackClassifier(config.random_forest_estimators, config.seed)
-    classifier_train = features.iloc[train_indices]
+    classifier_train = features.iloc[split.train]
     classifier_train = classifier_train[classifier_train["label"] != "normal"]
     classifier.fit(classifier_train, classifier_train["label"])
     all_scores = _combined_scores(features, detector)
-    threshold = tune_threshold(features.iloc[train_indices]["label"], all_scores[train_indices])
-    test_features = features.iloc[test_indices]
-    test_scores = all_scores[test_indices]
+    threshold = tune_threshold(
+        features.iloc[split.validation]["label"],
+        all_scores[split.validation],
+        minimum_recall=config.threshold_minimum_recall,
+        beta=config.threshold_f_beta,
+    )
+    test_features = features.iloc[split.test]
+    test_scores = all_scores[split.test]
     attack_predictions = classifier.predict(test_features)
     metrics = evaluate_predictions(
         test_features["label"],
@@ -75,6 +89,12 @@ def train_and_evaluate(
         threshold,
         attack_predictions,
     )
+    metrics["split"] = {
+        "training_event_count": len(split.train),
+        "validation_event_count": len(split.validation),
+        "test_event_count": len(split.test),
+        "threshold_tuned_on": "validation",
+    }
     predictions = _prediction_frame(test_features, test_scores, threshold, attack_predictions)
     return _save_outputs(
         output_directory,
@@ -148,19 +168,29 @@ def evaluate_model(
 def _split_indices(
     features: pd.DataFrame,
     config: TrainingConfig,
-) -> tuple[np.ndarray, np.ndarray]:
-    """Create reproducible stratified train and test indices."""
+) -> DatasetSplit:
+    """Create reproducible stratified train, validation, and test indices."""
 
     indices = np.arange(len(features))
     counts = features["label"].value_counts()
     stratify = features["label"] if int(counts.min()) >= 2 else None
-    train, test = train_test_split(
+    development, test = train_test_split(
         indices,
         test_size=config.test_fraction,
         random_state=config.seed,
         stratify=stratify,
     )
-    return np.sort(train), np.sort(test)
+    validation_share = config.validation_fraction / (1.0 - config.test_fraction)
+    development_labels = features.iloc[development]["label"]
+    development_counts = development_labels.value_counts()
+    development_stratify = development_labels if int(development_counts.min()) >= 2 else None
+    train, validation = train_test_split(
+        development,
+        test_size=validation_share,
+        random_state=config.seed + 1,
+        stratify=development_stratify,
+    )
+    return DatasetSplit(np.sort(train), np.sort(validation), np.sort(test))
 
 
 def _combined_scores(

@@ -1,7 +1,10 @@
 name: fast
 seed: 1729
 profile_fraction: 0.2
+validation_fraction: 0.2
 test_fraction: 0.3
+threshold_minimum_recall: 0.85
+threshold_f_beta: 0.75
 isolation_forest_estimators: 80
 isolation_forest_contamination: 0.015
 random_forest_estimators: 120

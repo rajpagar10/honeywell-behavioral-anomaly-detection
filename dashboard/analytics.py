@@ -28,6 +28,11 @@ def render_threat_analytics(
         utc=True,
         format="mixed",
     )
+    alert_frame["detected_at"] = pd.to_datetime(
+        alert_frame["updated_at"],
+        utc=True,
+        format="mixed",
+    )
     event_frame = pd.DataFrame(events)
 
     left, right = st.columns(2)
@@ -94,16 +99,16 @@ def render_threat_analytics(
             "analytics_auth",
         )
 
-    timeline = alert_frame.sort_values("event_timestamp")
+    timeline = alert_frame.sort_values("detected_at")
     figure = px.scatter(
         timeline,
-        x="event_timestamp",
+        x="detected_at",
         y="risk_score",
         color="attack_type",
         symbol="entity_type",
         size="classifier_confidence",
         hover_data=["entity_id", "severity", "cold_start", "drift_status"],
-        title="Risk timeline and attack progression",
+        title="Risk timeline by replay detection time",
     )
     figure.add_hline(y=70, line_dash="dash", line_color=HONEYWELL_RED, annotation_text="High risk")
     chart(figure, height=430, key="analytics_timeline")

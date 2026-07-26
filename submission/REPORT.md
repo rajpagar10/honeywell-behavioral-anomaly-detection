@@ -46,18 +46,19 @@ deterministic and traceable to observed features. No LLM is used.
 
 ## Results
 
-Held-out evaluation contains 600 events and nine anomalies:
+Held-out evaluation contains 3,000 events and 90 anomalies from the
+reproducible 10,000-event evaluation preset:
 
 | Metric | Result |
 |---|---:|
-| Precision | 64.29% |
-| Recall | 100.00% |
-| F1 | 78.26% |
-| PR-AUC | 57.71% |
-| False-positive rate | 0.85% |
-| Top-1% precision / recall | 50.00% / 33.33% |
+| Precision | 94.62% |
+| Recall | 97.78% |
+| F1 | 96.17% |
+| PR-AUC | 97.38% |
+| False-positive rate | 0.17% |
+| Top-1% precision / recall | 100.00% / 33.33% |
 
-The system prioritizes recall for high-consequence activity while keeping the
+The system retains high recall for high-consequence activity while keeping the
 held-out false-positive rate below one percent. Per-attack metrics and the
 confusion matrix are included in `submission/results/`.
 

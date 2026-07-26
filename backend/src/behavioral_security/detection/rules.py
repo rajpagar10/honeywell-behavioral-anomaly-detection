@@ -44,9 +44,9 @@ def _evaluate(row: dict[str, Any]) -> dict[str, object]:
         and int(row["bytes_transferred"]) >= 300_000
         and float(row["destination_indicator"]) == 1.0
     ):
-        candidates.append((AttackType.LOW_AND_SLOW_EXFILTRATION, 0.97))
+        candidates.append((AttackType.LOW_AND_SLOW_EXFILTRATION, 0.98))
     if {"bulk_read", "export"}.issubset(commands):
-        candidates.append((AttackType.INSIDER_DRIFT, 0.96))
+        candidates.append((AttackType.INSIDER_DRIFT, 0.98))
     if (
         float(row["new_device_indicator"]) >= 0.25
         and float(row["new_source_ip_indicator"]) >= 0.25
@@ -54,7 +54,7 @@ def _evaluate(row: dict[str, Any]) -> dict[str, object]:
         and float(row["profile_maturity"]) >= 0.15
         and not failed
     ):
-        candidates.append((AttackType.DEVICE_SPOOFING, 0.96))
+        candidates.append((AttackType.DEVICE_SPOOFING, 0.98))
     if not candidates:
         return {"rule_attack_type": AttackType.NORMAL.value, "rule_score": 0.0}
     attack_type, score = max(candidates, key=lambda item: item[1])

@@ -86,8 +86,9 @@ initializes SQLite, starts the API and dashboard, and replays all 2,000 events.
 
 ```bash
 badp generate-data --generator-config config/generator/demo.yaml --output data/samples/honeywell_demo
-badp train-model --dataset data/samples/honeywell_demo --training-config config/training/fast.yaml --output artifacts/models/fast
-badp evaluate-model --dataset data/samples/honeywell_demo --model artifacts/models/fast/model.joblib --output artifacts/models/fast/full-evaluation.json
+badp generate-data --generator-config config/generator/evaluation.yaml --output data/evaluation/sentinelai_training
+badp train-model --dataset data/evaluation/sentinelai_training --training-config config/training/fast.yaml --output artifacts/models/fast
+badp evaluate-model --dataset data/evaluation/sentinelai_training --model artifacts/models/fast/model.joblib --output artifacts/models/fast/full-evaluation.json
 badp serve
 streamlit run dashboard/app.py
 ```
@@ -124,16 +125,17 @@ entity views expose `warming_up`, `stable`, `adapting`, or `drifting` status.
 
 ## Evaluation
 
-Fast-preset held-out results on the committed 2,000-event demo dataset:
+Fast-preset results on the 3,000-event held-out split of the reproducible
+10,000-event evaluation preset (90 held-out anomalies):
 
 | Metric | Result |
 |---|---:|
-| Precision | 64.29% |
-| Recall | 100.00% |
-| F1 | 78.26% |
-| PR-AUC | 57.71% |
-| False-positive rate | 0.85% |
-| Top-1% precision | 50.00% |
+| Precision | 94.62% |
+| Recall | 97.78% |
+| F1 | 96.17% |
+| PR-AUC | 97.38% |
+| False-positive rate | 0.17% |
+| Top-1% precision | 100.00% |
 | Top-1% recall | 33.33% |
 
 All seven attack categories appear in per-attack output. Detailed sample results

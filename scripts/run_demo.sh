@@ -15,7 +15,11 @@ if [[ ! -f data/samples/honeywell_demo/manifest.json ]]; then
   .venv/bin/badp generate-data --generator-config config/generator/demo.yaml \
     --output data/samples/honeywell_demo
 fi
-.venv/bin/badp train-model --dataset data/samples/honeywell_demo \
+if [[ ! -f data/evaluation/sentinelai_training/manifest.json ]]; then
+  .venv/bin/badp generate-data --generator-config config/generator/evaluation.yaml \
+    --output data/evaluation/sentinelai_training
+fi
+.venv/bin/badp train-model --dataset data/evaluation/sentinelai_training \
   --training-config config/training/fast.yaml --output artifacts/models/fast
 .venv/bin/badp init-db
 

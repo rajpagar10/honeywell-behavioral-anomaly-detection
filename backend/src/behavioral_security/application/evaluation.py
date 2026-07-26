@@ -16,15 +16,30 @@ from sklearn.metrics import (
 )
 
 
-def tune_threshold(labels: pd.Series, scores: np.ndarray) -> float:
-    """Select the score threshold that maximizes anomaly F1."""
+def tune_threshold(
+    labels: pd.Series,
+    scores: np.ndarray,
+    *,
+    minimum_recall: float = 0.85,
+    beta: float = 0.75,
+) -> float:
+    """Select a precision-aware threshold while preserving minimum recall."""
 
     binary = (labels.astype(str) != "normal").astype(int).to_numpy()
     precision, recall, thresholds = precision_recall_curve(binary, scores)
     if thresholds.size == 0:
         return 0.5
-    f1 = 2 * precision[:-1] * recall[:-1] / np.maximum(precision[:-1] + recall[:-1], 1e-12)
-    return float(thresholds[int(np.argmax(f1))])
+    beta_squared = beta**2
+    scores_by_threshold = (
+        (1 + beta_squared)
+        * precision[:-1]
+        * recall[:-1]
+        / np.maximum(beta_squared * precision[:-1] + recall[:-1], 1e-12)
+    )
+    eligible = np.flatnonzero(recall[:-1] >= minimum_recall)
+    candidate_indices = eligible if eligible.size else np.arange(thresholds.size)
+    best = candidate_indices[int(np.argmax(scores_by_threshold[candidate_indices]))]
+    return float(thresholds[best])
 
 
 def evaluate_predictions(

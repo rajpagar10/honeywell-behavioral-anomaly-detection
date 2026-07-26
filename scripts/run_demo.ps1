@@ -23,7 +23,11 @@ if (-not (Test-Path -LiteralPath "data\samples\honeywell_demo\manifest.json")) {
     & $badp generate-data --generator-config config/generator/demo.yaml `
         --output data/samples/honeywell_demo
 }
-& $badp train-model --dataset data/samples/honeywell_demo `
+if (-not (Test-Path -LiteralPath "data\evaluation\sentinelai_training\manifest.json")) {
+    & $badp generate-data --generator-config config/generator/evaluation.yaml `
+        --output data/evaluation/sentinelai_training
+}
+& $badp train-model --dataset data/evaluation/sentinelai_training `
     --training-config config/training/fast.yaml --output artifacts/models/fast
 & $badp init-db
 

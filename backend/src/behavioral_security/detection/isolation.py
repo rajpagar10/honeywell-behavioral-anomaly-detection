@@ -49,11 +49,8 @@ class IsolationForestDetector:
             raise RuntimeError("detector must be fitted before scoring")
         matrix = features.loc[:, MODEL_FEATURES].astype(float).to_numpy()
         raw = -self.model.decision_function(self.scaler.transform(matrix))
+        normalized = (raw - self.score_low) / (self.score_high - self.score_low)
         return cast(
             np.ndarray,
-            np.clip(
-                (raw - self.score_low) / (self.score_high - self.score_low),
-                0.0,
-                1.0,
-            ),
+            1.0 / (1.0 + np.exp(-np.clip(6.0 * (normalized - 0.5), -60.0, 60.0))),
         )

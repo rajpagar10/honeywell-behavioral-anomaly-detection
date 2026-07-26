@@ -61,9 +61,9 @@
 
 ## Slide 9 — Results
 
-- Precision 64.29%; recall 100%; F1 78.26%
-- PR-AUC 57.71%; false-positive rate 0.85%
-- Top-1% alert budget: 50% precision, 33.33% recall
+- Precision 94.62%; recall 97.78%; F1 96.17%
+- PR-AUC 97.38%; false-positive rate 0.17%
+- Top-1% alert budget: 100% precision, 33.33% recall
 - All seven attacks represented in classification output
 
 ## Slide 10 — Limitations and path to production
