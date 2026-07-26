@@ -3,13 +3,13 @@ requires = ["setuptools>=75"]
 build-backend = "setuptools.build_meta"
 
 [project]
-name = "behavioral-security-platform"
+name = "sentinelai"
 version = "0.2.0"
-description = "Enterprise behavioral anomaly detection platform for SOC operations."
+description = "AI-Powered Behavioral Threat Detection & Investigation Platform"
 readme = "README.md"
 requires-python = ">=3.11,<3.14"
 license = { text = "Proprietary - Hackathon Evaluation" }
-authors = [{ name = "Honeywell Campus Connect Team" }]
+authors = [{ name = "SentinelAI Hackathon Team" }]
 dependencies = [
     "fastapi>=0.116,<1.0",
     "pydantic>=2.11,<3.0",

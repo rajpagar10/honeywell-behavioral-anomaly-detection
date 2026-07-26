@@ -1,4 +1,6 @@
-# Analyst dashboard
+# SentinelAI Analyst Dashboard
+
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
 
 The white-theme analyst console provides seven SOC workspaces: executive
 overview, live operations, alert center, threat analytics, entity intelligence,

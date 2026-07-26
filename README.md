@@ -1,9 +1,13 @@
-# Honeywell Behavioral Anomaly Detection Platform
+# SentinelAI
 
-An explainable, near-real-time behavioral security platform built for the
-Honeywell Campus Connect Hackathon. It models normal user and device activity,
-detects unknown and known attacks, ranks alerts by operational risk, and gives
-SOC analysts evidence-backed explanations and recommended actions.
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
+
+Developed for the Honeywell Campus Connect Hackathon.
+
+SentinelAI is an explainable, near-real-time threat analytics system. It models
+normal user and device activity, detects unknown and known attacks, ranks alerts
+by operational risk, and gives SOC analysts evidence-backed explanations and
+recommended actions.
 
 ## Problem
 

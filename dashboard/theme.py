@@ -83,14 +83,17 @@ def page_header() -> None:
 
     left, right = st.columns([5, 1])
     with left:
-        st.markdown('<div class="hw-kicker">HONEYWELL CAMPUS CONNECT</div>', unsafe_allow_html=True)
         st.markdown(
-            '<div class="hw-title">Behavioral Security Operations Center</div>',
+            '<div class="hw-kicker">SENTINELAI</div>',
             unsafe_allow_html=True,
         )
         st.markdown(
-            '<div class="hw-subtitle">Identity, device, and industrial-edge behavior analytics '
-            "with explainable risk intelligence.</div>",
+            '<div class="hw-title">SentinelAI</div>',
+            unsafe_allow_html=True,
+        )
+        st.markdown(
+            '<div class="hw-subtitle">AI-Powered Behavioral Threat Detection &amp; '
+            "Investigation Platform</div>",
             unsafe_allow_html=True,
         )
     with right:

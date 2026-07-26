@@ -1,4 +1,4 @@
-# Demo scripts
+# SentinelAI Demo Scripts
 
 - Windows: `powershell -ExecutionPolicy Bypass -File scripts/run_demo.ps1`
 - Linux/macOS: `bash scripts/run_demo.sh`

@@ -1,4 +1,6 @@
-# Demonstration Guide
+# SentinelAI Demonstration Guide
+
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
 
 ## Start
 

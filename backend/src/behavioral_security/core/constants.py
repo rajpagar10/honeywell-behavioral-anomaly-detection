@@ -1,6 +1,6 @@
 """Stable application and schema constants."""
 
-APP_NAME = "Behavioral Security Platform"
+APP_NAME = "SentinelAI"
 APP_VERSION = "0.2.0"
 API_VERSION = "v1"
 EVENT_SCHEMA_VERSION = "1.0"

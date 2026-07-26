@@ -1,4 +1,6 @@
-# Presentation Content
+# SentinelAI Presentation Content
+
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
 
 ## Slide 1 — The problem
 

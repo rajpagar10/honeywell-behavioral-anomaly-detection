@@ -1,4 +1,4 @@
-"""Behavioral Security Platform backend package."""
+"""SentinelAI backend package."""
 
 from behavioral_security.core.constants import APP_VERSION
 

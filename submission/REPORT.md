@@ -1,4 +1,6 @@
-# Hackathon Report
+# SentinelAI Hackathon Report
+
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
 
 ## Executive summary
 

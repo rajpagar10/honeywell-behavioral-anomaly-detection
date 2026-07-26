@@ -1,4 +1,4 @@
-"""Honeywell Behavioral Security multi-view analyst dashboard."""
+"""SentinelAI multi-view analyst dashboard."""
 
 from datetime import UTC, datetime
 from typing import Any
@@ -14,7 +14,7 @@ from overview import render_overview
 from theme import apply_theme, page_header
 
 st.set_page_config(
-    page_title="Honeywell Behavioral Security SOC",
+    page_title="SentinelAI | Behavioral Threat Detection",
     page_icon="⬡",
     layout="wide",
     initial_sidebar_state="expanded",
@@ -81,8 +81,8 @@ def _sidebar() -> tuple[str, str, bool, int]:
     """Render navigation and live-data controls."""
 
     with st.sidebar:
-        st.markdown("### HONEYWELL")
-        st.caption("Behavioral Security Platform")
+        st.markdown("### SENTINELAI")
+        st.caption("Behavioral Threat Detection")
         st.divider()
         navigation = st.radio(
             "Workspace",

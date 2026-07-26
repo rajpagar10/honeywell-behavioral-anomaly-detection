@@ -17,7 +17,7 @@ def build_parser() -> argparse.ArgumentParser:
 
     parser = argparse.ArgumentParser(
         prog="badp",
-        description="Behavioral Security Platform operational CLI.",
+        description="SentinelAI operational CLI.",
     )
     parser.add_argument(
         "--config",

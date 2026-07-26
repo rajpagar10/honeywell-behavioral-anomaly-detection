@@ -1,5 +1,7 @@
 # Milestone 1: Repository Inspection and Architecture
 
+**SentinelAI — AI-Powered Behavioral Threat Detection & Investigation Platform**
+
 ## Purpose
 
 This directory is the architecture baseline for the Behavioral Anomaly Detection

@@ -1,6 +1,8 @@
-# Submission Package
+# SentinelAI Submission Package
 
-Project: **Honeywell Behavioral Anomaly Detection Platform**
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
+
+Developed for the Honeywell Campus Connect Hackathon.
 
 ## Included
 

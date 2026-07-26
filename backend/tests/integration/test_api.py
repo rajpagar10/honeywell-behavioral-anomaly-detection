@@ -14,7 +14,7 @@ def test_health_and_readiness_endpoints(test_settings: Settings) -> None:
     assert health.status_code == 200
     assert health.json() == {
         "status": "healthy",
-        "service": "Behavioral Security Platform",
+        "service": "SentinelAI",
         "version": "0.2.0",
         "environment": "test",
     }

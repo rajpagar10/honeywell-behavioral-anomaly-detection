@@ -1,4 +1,6 @@
-# Architecture
+# SentinelAI Architecture
+
+**AI-Powered Behavioral Threat Detection & Investigation Platform**
 
 ```mermaid
 flowchart TB
