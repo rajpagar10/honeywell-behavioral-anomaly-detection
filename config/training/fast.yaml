@@ -1,0 +1,7 @@
+name: fast
+seed: 1729
+profile_fraction: 0.2
+test_fraction: 0.3
+isolation_forest_estimators: 80
+isolation_forest_contamination: 0.015
+random_forest_estimators: 120

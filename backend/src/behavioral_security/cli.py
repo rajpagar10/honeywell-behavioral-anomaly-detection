@@ -48,6 +48,27 @@ def build_parser() -> argparse.ArgumentParser:
         action="store_true",
         help="Replace an existing generated dataset in the selected output directory.",
     )
+    train_parser = subparsers.add_parser(
+        "train-model",
+        help="Build profiles, train detectors, evaluate, and save model artifacts.",
+    )
+    train_parser.add_argument("--dataset", type=Path, required=True)
+    train_parser.add_argument("--training-config", type=Path, required=True)
+    train_parser.add_argument("--output", type=Path, required=True)
+    evaluate_parser = subparsers.add_parser(
+        "evaluate-model",
+        help="Evaluate a saved model against a labeled synthetic dataset.",
+    )
+    evaluate_parser.add_argument("--dataset", type=Path, required=True)
+    evaluate_parser.add_argument("--model", type=Path, required=True)
+    evaluate_parser.add_argument("--output", type=Path, required=True)
+    infer_parser = subparsers.add_parser(
+        "infer",
+        help="Run behavioral inference on an operational events CSV.",
+    )
+    infer_parser.add_argument("--events", type=Path, required=True)
+    infer_parser.add_argument("--model", type=Path, required=True)
+    infer_parser.add_argument("--output", type=Path, required=True)
     subparsers.add_parser("serve", help="Run the FastAPI service.")
     return parser
 
@@ -101,6 +122,51 @@ def main(argv: Sequence[str] | None = None) -> int:
                 sort_keys=True,
             )
         )
+        return 0
+    if arguments.command == "train-model":
+        from behavioral_security.application.pipeline import train_and_evaluate
+        from behavioral_security.application.training_config import load_training_config
+
+        root = find_project_root()
+        result = train_and_evaluate(
+            _resolve_cli_path(arguments.dataset, root),
+            _resolve_cli_path(arguments.output, root),
+            load_training_config(_resolve_cli_path(arguments.training_config, root)),
+        )
+        print(
+            json.dumps(
+                {
+                    "model": str(result.model_path),
+                    "profiles": str(result.profiles_path),
+                    "metrics": result.metrics,
+                    "predictions": str(result.predictions_path),
+                },
+                indent=2,
+                sort_keys=True,
+            )
+        )
+        return 0
+    if arguments.command == "evaluate-model":
+        from behavioral_security.application.pipeline import evaluate_model
+
+        root = find_project_root()
+        metrics = evaluate_model(
+            _resolve_cli_path(arguments.dataset, root),
+            _resolve_cli_path(arguments.model, root),
+            _resolve_cli_path(arguments.output, root),
+        )
+        print(json.dumps(metrics, indent=2, sort_keys=True))
+        return 0
+    if arguments.command == "infer":
+        from behavioral_security.application.pipeline import run_inference
+
+        root = find_project_root()
+        output = run_inference(
+            _resolve_cli_path(arguments.events, root),
+            _resolve_cli_path(arguments.model, root),
+            _resolve_cli_path(arguments.output, root),
+        )
+        print(json.dumps({"predictions": str(output)}, indent=2))
         return 0
     if arguments.command == "serve":
         from behavioral_security.api.app import create_app

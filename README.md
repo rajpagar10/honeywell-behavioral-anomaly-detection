@@ -112,6 +112,18 @@ The anomaly rate is validated between 0.5% and 3%. Generation fails unless every
 required attack can be represented. Existing exports are protected unless
 `--overwrite` is explicitly supplied.
 
+## Behavioral model pipeline
+
+```bash
+badp train-model --dataset data/samples/honeywell_demo --training-config config/training/fast.yaml --output artifacts/models/fast
+badp evaluate-model --dataset data/samples/honeywell_demo --model artifacts/models/fast/model.joblib --output artifacts/models/fast/full-evaluation.json
+badp infer --events data/samples/honeywell_demo/events.csv --model artifacts/models/fast/model.joblib --output artifacts/models/fast/inference.csv
+```
+
+The MVP combines per-entity and peer profiles, sequential rolling features,
+Isolation Forest, deterministic attack rules, and class-weighted Random Forest
+classification. Use `config/training/default.yaml` for the full preset.
+
 ## Quality commands
 
 ```bash

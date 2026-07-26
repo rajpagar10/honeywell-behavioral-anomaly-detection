@@ -28,10 +28,13 @@ dev = [
     "types-PyYAML>=6.0.12,<7.0",
 ]
 ml = [
-    "lightgbm>=4.6,<5.0",
-    "numpy>=2.1,<3.0",
+    "joblib>=1.4,<2.0",
+    "numpy>=2.1,<2.4",
     "pandas>=2.2,<3.0",
     "scikit-learn>=1.6,<2.0",
+]
+ml-advanced = [
+    "lightgbm>=4.6,<5.0",
     "torch>=2.7,<3.0",
     "xgboost>=3.0,<4.0",
 ]
@@ -84,5 +87,17 @@ files = ["backend/src", "backend/tests"]
 plugins = ["pydantic.mypy"]
 
 [[tool.mypy.overrides]]
-module = ["yaml", "dotenv", "numpy", "torch"]
+module = [
+    "yaml",
+    "dotenv",
+    "joblib",
+    "numpy",
+    "numpy.*",
+    "pandas",
+    "pandas.*",
+    "sklearn",
+    "sklearn.*",
+    "torch",
+]
+follow_imports = "skip"
 ignore_missing_imports = true
