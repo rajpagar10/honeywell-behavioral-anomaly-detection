@@ -4,6 +4,7 @@ from datetime import UTC, datetime
 from typing import Any
 
 import streamlit as st
+from ai_investigation import render_global_copilot
 from analytics import render_model_performance, render_threat_analytics
 from api_client import APIUnavailableError, SOCAPIClient
 from entities import render_entity_intelligence
@@ -130,12 +131,16 @@ def main() -> None:
                 language="powershell",
             )
             return
-        st.caption(
-            f"{navigation} · "
-            f"Updated {datetime.now(UTC).strftime('%H:%M:%S UTC')} · "
-            f"{'Auto-refresh on' if auto_refresh else 'Manual refresh'}"
-        )
-        _render_view(navigation, data, client)
+        workspace, copilot = st.columns([3.5, 1.9], gap="large")
+        with workspace:
+            st.caption(
+                f"{navigation} · "
+                f"Updated {datetime.now(UTC).strftime('%H:%M:%S UTC')} · "
+                f"{'Auto-refresh on' if auto_refresh else 'Manual refresh'}"
+            )
+            _render_view(navigation, data, client)
+        with copilot:
+            render_global_copilot(client, data["alerts"])
 
     live_workspace()
 

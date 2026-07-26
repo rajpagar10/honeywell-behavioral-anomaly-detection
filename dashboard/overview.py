@@ -19,7 +19,7 @@ def render_overview(
     critical = sum(alert["severity"] == "critical" for alert in alerts)
     high = sum(alert["severity"] == "high" for alert in alerts)
     cold = sum(bool(alert.get("cold_start")) for alert in alerts)
-    metrics = st.columns(5)
+    metrics = [*st.columns(3), *st.columns(2)]
     metrics[0].metric("Events", f"{summary.get('events', 0):,}")
     metrics[1].metric("Open alerts", f"{summary.get('alerts', 0):,}")
     metrics[2].metric("Entities", f"{summary.get('entities', 0):,}")

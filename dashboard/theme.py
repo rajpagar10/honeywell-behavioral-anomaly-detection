@@ -77,6 +77,52 @@ def apply_theme() -> None:
           background:#fff; border:1px solid var(--line); border-left:4px solid var(--hw-red);
           border-radius:12px; padding:.9rem 1rem; margin:.45rem 0;
         }
+        [data-testid="stColumn"]:has(.copilot-marker) {
+          position:sticky; top:1rem; align-self:flex-start;
+          min-width:250px;
+          max-height:calc(100vh - 2rem); overflow-y:auto;
+          background:rgba(255,255,255,.96); border:1px solid var(--line);
+          border-radius:16px; padding:1rem;
+          box-shadow:0 12px 32px rgba(16,24,40,.10);
+          scrollbar-width:thin;
+        }
+        .copilot-heading {
+          display:flex; align-items:center; gap:.65rem; margin-bottom:.8rem;
+          color:var(--ink); font-size:.96rem;
+        }
+        .copilot-heading small {
+          display:block; color:var(--muted); font-size:.68rem; margin-top:.1rem;
+        }
+        .copilot-orb {
+          display:grid; place-items:center; width:2.1rem; height:2.1rem;
+          background:linear-gradient(135deg,#e31b23,#9b1118); color:#fff;
+          border-radius:10px; box-shadow:0 5px 14px rgba(227,27,35,.24);
+        }
+        .copilot-risk {
+          border:1px solid #fecdca; background:#fff6f5; border-radius:12px;
+          padding:.75rem; margin:.2rem 0 .8rem;
+        }
+        .copilot-risk>span {
+          color:#b42318; font-size:.65rem; letter-spacing:.11em; font-weight:760;
+        }
+        .copilot-risk>strong {
+          display:block; color:#7a271a; font-size:1.7rem; line-height:1.1;
+        }
+        .copilot-risk>strong small { font-size:.78rem; font-weight:600; }
+        .copilot-risk>p { color:var(--muted); font-size:.75rem; margin:.22rem 0 0; }
+        .copilot-arrow { color:var(--hw-red); padding-left:.4rem; }
+        @media (max-width: 900px) {
+          [data-testid="stHorizontalBlock"]:has(.copilot-marker) {
+            flex-direction:column;
+          }
+          [data-testid="stHorizontalBlock"]:has(.copilot-marker)
+          > [data-testid="stColumn"] {
+            width:100% !important; flex:1 1 100% !important;
+          }
+          [data-testid="stColumn"]:has(.copilot-marker) {
+            position:static; min-width:0; max-height:none; overflow:visible;
+          }
+        }
         .stButton>button[kind="primary"] {
           background:var(--hw-red); border-color:var(--hw-red); border-radius:9px;
         }

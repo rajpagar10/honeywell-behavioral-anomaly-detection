@@ -152,8 +152,9 @@ cold-start/drift indicators, confusion matrices, and top-1% budget metrics.
 
 ### AI Investigation Copilot
 
-Alert Details includes an evidence-grounded Investigation Copilot with
-predefined analyst questions, recommended actions, a short timeline, and
+Every dashboard workspace includes a persistent right-side Investigation
+Copilot. It follows the selected alert, supports predefined analyst questions,
+and provides grounded explanations, recommended actions, a short timeline, and
 persisted analyst feedback. The detector and risk policy remain the source of
 truth. To enable the optional local model:
 
