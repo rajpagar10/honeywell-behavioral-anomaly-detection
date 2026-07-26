@@ -4,10 +4,12 @@
 
 Developed for the Honeywell Campus Connect Hackathon.
 
+**Source code:** [GitHub repository](https://github.com/rajpagar10/honeywell-behavioral-anomaly-detection)
+
 ## Included
 
 - [`REPORT.md`](REPORT.md): concise hackathon report
-- [`PRESENTATION.md`](PRESENTATION.md): presentation-ready 10-slide narrative
+- [`PRESENTATION.md`](PRESENTATION.md): template-aligned six-slide narrative
 - [`ARCHITECTURE.md`](ARCHITECTURE.md): architecture and data-flow diagrams
 - [`DEMO.md`](DEMO.md): exact demonstration sequence
 - [`results/metrics.json`](results/metrics.json): held-out metrics

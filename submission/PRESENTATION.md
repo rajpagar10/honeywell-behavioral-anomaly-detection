@@ -2,73 +2,73 @@
 
 **AI-Powered Behavioral Threat Detection & Investigation Platform**
 
-## Slide 1 — The problem
+Developed for the Honeywell Campus Connect Hackathon.
 
-- Static rules miss novel compromise behavior.
-- SOC analysts face high alert volume and weak context.
-- Users, service identities, IoT, and edge devices behave differently.
-- New entities and legitimate change make fixed thresholds unreliable.
+**Source code:** [GitHub repository](https://github.com/rajpagar10/honeywell-behavioral-anomaly-detection)
 
-## Slide 2 — Proposed solution
+## Slide 1 - Title Page
 
-- Learn normal behavior for every identity and device.
-- Combine unknown-anomaly ML, known-attack rules, and classification.
-- Convert evidence into explainable, risk-ranked SOC alerts.
-- Replay events near real time in an investigation-ready dashboard.
+- **Idea:** SentinelAI
+- **Problem statement:** AI-powered behavioral anomaly detection for cybersecurity
+- **Theme:** Cybersecurity
+- **Category:** Software
+- **Purpose:** Detect, explain, and investigate abnormal user and device behavior
 
-## Slide 3 — Architecture
+## Slide 2 - Proposed Solution
 
-- Synthetic generator → profiles → sequential features
-- Isolation Forest + deterministic rules + Random Forest
-- Explainable risk policy → SQLite → FastAPI → Streamlit
-- Ground truth is isolated and used only during evaluation.
+- Learn normal behavior for users, service accounts, IoT devices, and edge devices.
+- Combine unknown-anomaly ML, deterministic attack rules, and attack classification.
+- Convert evidence into explainable 0-100 risk scores and ranked SOC alerts.
+- Handle new entities through peer baselines and legitimate change through trusted decay.
+- Give analysts a grounded AI investigation copilot with deterministic fallback.
 
-## Slide 4 — Data and attack taxonomy
+**Why it is different:** SentinelAI connects detection, explanation, adaptation,
+real-time replay, and analyst investigation in one working SOC platform.
 
-- 2,000 events, 108 entities, four entity types, 1.5% anomalies
-- Stable individual schedules, resources, devices, locations, and transitions
-- Brute force, impossible travel, credential stuffing, lateral movement
-- Device spoofing, low-and-slow exfiltration, insider drift
+## Slide 3 - Technical Approach
 
-## Slide 5 — Detection approach
+**Data flow**
+
+Synthetic events -> behavioral profiles -> sequential features -> detection and
+classification -> explainable risk -> SQLite -> FastAPI -> SOC dashboard
+
+**Detection**
 
 - Isolation Forest discovers multivariate unknown behavior.
-- Rolling failures, previous events, travel velocity, and transitions encode sequence.
-- Rules provide precise evidence for recognizable attack sequences.
-- Class-weighted Random Forest handles attack-type imbalance.
+- Rolling failures, prior events, travel velocity, and transition rarity encode sequence.
+- Deterministic rules identify seven attack families with precise evidence.
+- Class-weighted Random Forest classifies attack type under imbalance.
 
-## Slide 6 — Explainability and risk
+**Technology**
 
-- 0–100 score combines model, classifier, rule, behavior, resource, device,
-  geography, and entity history.
-- Every alert lists top contributing factors.
-- Concise deterministic explanation—no LLM.
-- Recommended analyst actions accelerate triage.
+Python, FastAPI, Streamlit, scikit-learn, Pandas, NumPy, SQLite, Plotly, Docker,
+Ollama, pytest, Ruff, mypy, and GitHub Actions.
 
-## Slide 7 — Cold start and concept drift
+## Slide 4 - Feasibility and Viability
 
-- Fallback: entity → department → entity type → organization.
-- Cold-start confidence is explicitly reduced and labeled.
-- Trusted behavior updates an exponential-decay recent baseline.
-- Anomalies cannot immediately poison the profile.
+- Working one-command demo generates, trains, serves, and replays 2,000 events.
+- Held-out precision 94.62%, recall 97.78%, F1 96.17%, and PR-AUC 97.38%.
+- False-positive rate is 0.17%; top-1% analyst-budget precision is 100%.
+- Cold-start confidence reduction and peer baselines prevent overconfident alerts.
+- Trusted decay adapts profiles while anomalous events cannot poison the baseline.
+- SQLite and polling keep the demo reliable; durable streaming and RBAC are clear production upgrades.
 
-## Slide 8 — Dashboard and demo
+## Slide 5 - Artifacts and Working Prototype
 
-- Executive metrics, live replay, ranked queue, filters, and detail view
-- Risk, attack, entity, and confusion-matrix charts
-- Entity history with cold-start and drift state
-- API/database/replay system health
+- White multi-workspace SOC dashboard with live operations and ranked alerts
+- Alert details with evidence, risk contributions, actions, and analyst feedback
+- Grounded AI Investigation Copilot with Ollama and automatic template fallback
+- FastAPI endpoints, SQLite replay state, Docker support, and startup scripts
+- Reproducible datasets, saved model artifacts, evaluation results, and 37 passing tests
+- Public source: github.com/rajpagar10/honeywell-behavioral-anomaly-detection
 
-## Slide 9 — Results
+## Slide 6 - Research and References
 
-- Precision 94.62%; recall 97.78%; F1 96.17%
-- PR-AUC 97.38%; false-positive rate 0.17%
-- Top-1% alert budget: 100% precision, 33.33% recall
-- All seven attacks represented in classification output
-
-## Slide 10 — Limitations and path to production
-
-- Validate calibration on real Honeywell telemetry.
-- Add authentication, RBAC, signed artifacts, and audit integration.
-- Scale SQLite replay to a durable event bus when volume requires it.
-- Use analyst feedback for threshold and profile governance.
+- Liu, Ting, and Zhou - Isolation Forest
+- Breiman - Random Forests
+- scikit-learn documentation - IsolationForest and RandomForestClassifier
+- FastAPI documentation - typed asynchronous APIs
+- Streamlit and Plotly documentation - interactive SOC visualization
+- Ollama documentation - local open-source model serving
+- Complete implementation and evidence:
+  github.com/rajpagar10/honeywell-behavioral-anomaly-detection

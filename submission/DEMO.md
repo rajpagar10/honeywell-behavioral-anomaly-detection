@@ -2,6 +2,8 @@
 
 **AI-Powered Behavioral Threat Detection & Investigation Platform**
 
+**Source code:** [GitHub repository](https://github.com/rajpagar10/honeywell-behavioral-anomaly-detection)
+
 ## Start
 
 Windows:

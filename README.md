@@ -4,6 +4,8 @@
 
 Developed for the Honeywell Campus Connect Hackathon.
 
+**Source code:** [GitHub repository](https://github.com/rajpagar10/honeywell-behavioral-anomaly-detection)
+
 SentinelAI is an explainable, near-real-time threat analytics system. It models
 normal user and device activity, detects unknown and known attacks, ranks alerts
 by operational risk, and gives SOC analysts evidence-backed explanations and

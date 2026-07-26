@@ -2,6 +2,10 @@
 
 **AI-Powered Behavioral Threat Detection & Investigation Platform**
 
+Developed for the Honeywell Campus Connect Hackathon.
+
+**Source code:** [GitHub repository](https://github.com/rajpagar10/honeywell-behavioral-anomaly-detection)
+
 ## Executive summary
 
 The platform demonstrates how behavioral analytics can reduce reliance on
@@ -42,7 +46,9 @@ sequence-aware MVP without deep-learning operational risk.
 Every alert includes its anomaly score, classifier confidence, rule evidence,
 behavioral deviation, asset sensitivity, device novelty, geographic anomaly,
 and historical behavior contributions. Human-readable explanations are
-deterministic and traceable to observed features. No LLM is used.
+deterministic and traceable to observed features. An optional grounded Ollama
+copilot explains only the supplied alert evidence and automatically falls back
+to deterministic templates when the local model is unavailable.
 
 ## Results
 
