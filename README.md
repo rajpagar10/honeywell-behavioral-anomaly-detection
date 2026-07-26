@@ -24,7 +24,7 @@ individual baseline while still supporting new entities and legitimate change.
 - Explainable 0–100 risk scoring and ranked alerts
 - Cold-start confidence reduction with peer baselines
 - Trusted exponential-decay updates for concept drift
-- SQLite-backed replay, FastAPI, and a dark Streamlit SOC dashboard
+- SQLite-backed replay, FastAPI, and a white multi-view Streamlit SOC console
 
 ## Architecture
 
@@ -137,10 +137,12 @@ are in [`submission/results/metrics.json`](submission/results/metrics.json).
 
 ## Dashboard
 
-The analyst interface includes executive metrics, live events, risk-ranked
-alerts, risk and attack distributions, risky entities, alert explanations,
-recommended response actions, entity behavioral history, cold-start/drift
-indicators, evaluation metrics, confusion matrix, and system health.
+The analyst console provides seven workspaces: Executive Overview, Live
+Operations, Alert Center, Threat Analytics, Entity Intelligence, Model
+Performance, and System Health. It includes configurable 2–30 second automatic
+polling, replay controls, attack heatmaps, risk timelines, advanced alert
+filters, CSV export, explainability, response checklists, profile intelligence,
+cold-start/drift indicators, confusion matrices, and top-1% budget metrics.
 
 ## Testing
 

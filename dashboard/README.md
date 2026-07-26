@@ -1,10 +1,12 @@
-# SOC Dashboard
+# Analyst dashboard
 
-Start the API first, then run:
+The white-theme analyst console provides seven SOC workspaces: executive
+overview, live operations, alert center, threat analytics, entity intelligence,
+model performance, and system health.
 
-```bash
-streamlit run dashboard/app.py
+It polls operational API endpoints automatically every 2–30 seconds. Ground
+truth remains isolated. Start the complete demo with:
+
+```powershell
+powershell -ExecutionPolicy Bypass -File scripts/run_demo.ps1
 ```
-
-The dashboard reads only operational API endpoints. Ground-truth labels remain
-isolated from analyst-facing views.
