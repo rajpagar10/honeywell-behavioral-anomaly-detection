@@ -115,12 +115,28 @@ class SOCRepository:
             )
             connection.execute(
                 """
-                INSERT OR REPLACE INTO alerts(
+                INSERT INTO alerts(
                     alert_id, event_id, entity_id, attack_type, severity, status,
                     risk_score, classifier_confidence, classifier_version,
                     correlation_key, created_at, updated_at, event_timestamp,
                     explanation_json, recommended_actions_json, cold_start, drift_status
                 ) VALUES (?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?, ?)
+                ON CONFLICT(alert_id) DO UPDATE SET
+                    event_id=excluded.event_id,
+                    entity_id=excluded.entity_id,
+                    attack_type=excluded.attack_type,
+                    severity=excluded.severity,
+                    status=excluded.status,
+                    risk_score=excluded.risk_score,
+                    classifier_confidence=excluded.classifier_confidence,
+                    classifier_version=excluded.classifier_version,
+                    correlation_key=excluded.correlation_key,
+                    updated_at=excluded.updated_at,
+                    event_timestamp=excluded.event_timestamp,
+                    explanation_json=excluded.explanation_json,
+                    recommended_actions_json=excluded.recommended_actions_json,
+                    cold_start=excluded.cold_start,
+                    drift_status=excluded.drift_status
                 """,
                 (
                     str(alert.alert_id),

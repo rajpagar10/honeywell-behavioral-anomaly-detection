@@ -84,6 +84,16 @@ class IntelligenceSettings(SettingsModel):
     recent_limit: Annotated[int, Field(ge=1, le=1000)] = 100
 
 
+class InvestigationSettings(SettingsModel):
+    """Optional local investigation-copilot provider settings."""
+
+    provider: Literal["ollama", "template"] = "ollama"
+    model: Annotated[str, Field(min_length=1, max_length=128)] = "llama3.1:8b"
+    base_url: Annotated[str, Field(min_length=8, max_length=512)] = "http://127.0.0.1:11434"
+    timeout_seconds: Annotated[float, Field(ge=0.1, le=30.0)] = 3.0
+    retry_cooldown_seconds: Annotated[int, Field(ge=5, le=3600)] = 30
+
+
 class Settings(SettingsModel):
     """Central validated configuration graph."""
 
@@ -93,3 +103,4 @@ class Settings(SettingsModel):
     logging: LoggingSettings = LoggingSettings()
     randomness: RandomnessSettings = RandomnessSettings()
     intelligence: IntelligenceSettings = IntelligenceSettings()
+    investigation: InvestigationSettings = InvestigationSettings()

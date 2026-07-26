@@ -150,6 +150,23 @@ polling, replay controls, attack heatmaps, risk timelines, advanced alert
 filters, CSV export, explainability, response checklists, profile intelligence,
 cold-start/drift indicators, confusion matrices, and top-1% budget metrics.
 
+### AI Investigation Copilot
+
+Alert Details includes an evidence-grounded Investigation Copilot with
+predefined analyst questions, recommended actions, a short timeline, and
+persisted analyst feedback. The detector and risk policy remain the source of
+truth. To enable the optional local model:
+
+```bash
+ollama pull llama3.1:8b
+ollama serve
+```
+
+Configure `BADP_INVESTIGATION__PROVIDER=ollama` and
+`BADP_INVESTIGATION__MODEL=llama3.1:8b`. If Ollama is unavailable, SentinelAI
+automatically uses the deterministic template response without interrupting the
+API or dashboard.
+
 ## Testing
 
 ```bash

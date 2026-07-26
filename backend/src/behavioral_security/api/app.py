@@ -9,13 +9,18 @@ from fastapi.middleware.cors import CORSMiddleware
 from behavioral_security.api.middleware import CorrelationIdMiddleware
 from behavioral_security.api.routes.health import router as health_router
 from behavioral_security.api.routes.soc import router as soc_router
+from behavioral_security.application.investigation import InvestigationService
 from behavioral_security.application.realtime import RealtimeSOCService
 from behavioral_security.core.constants import APP_VERSION
 from behavioral_security.core.randomness import set_global_seed
 from behavioral_security.infrastructure.config.loader import find_project_root, get_settings
 from behavioral_security.infrastructure.config.settings import Settings
+from behavioral_security.infrastructure.database.investigation_repository import (
+    SQLiteInvestigationRepository,
+)
 from behavioral_security.infrastructure.database.manager import DatabaseManager
 from behavioral_security.infrastructure.database.soc_repository import SOCRepository
+from behavioral_security.infrastructure.llm import OllamaEvidenceSelector
 from behavioral_security.infrastructure.observability.logging import configure_logging
 
 
@@ -32,10 +37,27 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         resolved_settings.database,
         project_root=find_project_root(),
     )
+    soc_repository = SOCRepository(database_manager.operational)
     soc_service = RealtimeSOCService(
-        SOCRepository(database_manager.operational),
+        soc_repository,
         resolved_settings.intelligence,
         project_root=find_project_root(),
+    )
+    investigation_repository = SQLiteInvestigationRepository(database_manager.operational)
+    selector = (
+        OllamaEvidenceSelector(
+            base_url=resolved_settings.investigation.base_url,
+            model=resolved_settings.investigation.model,
+            timeout_seconds=resolved_settings.investigation.timeout_seconds,
+        )
+        if resolved_settings.investigation.provider == "ollama"
+        else None
+    )
+    investigation_service = InvestigationService(
+        investigation_repository,
+        selector,
+        configured_provider=resolved_settings.investigation.provider,
+        retry_cooldown_seconds=resolved_settings.investigation.retry_cooldown_seconds,
     )
 
     @asynccontextmanager
@@ -45,6 +67,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
         database_manager.initialize()
         app.state.database_manager = database_manager
         app.state.soc_service = soc_service
+        app.state.investigation_service = investigation_service
         yield
         await soc_service.shutdown()
 
@@ -61,6 +84,7 @@ def create_app(settings: Settings | None = None) -> FastAPI:
     app.state.settings = resolved_settings
     app.state.database_manager = database_manager
     app.state.soc_service = soc_service
+    app.state.investigation_service = investigation_service
     app.add_middleware(CorrelationIdMiddleware)
     if resolved_settings.api.cors_origins:
         app.add_middleware(

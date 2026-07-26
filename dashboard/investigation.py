@@ -5,6 +5,7 @@ from typing import Any
 import pandas as pd
 import plotly.express as px
 import streamlit as st
+from ai_investigation import render_ai_investigation
 from api_client import SOCAPIClient
 from theme import HONEYWELL_RED, chart, labelize, section_header
 
@@ -142,10 +143,14 @@ def render_alert_center(
         format_func=lambda alert_id: _alert_option(filtered, alert_id),
     )
     detail = client.get(f"/api/v1/alerts/{selected_id}")
-    _render_alert_detail(detail, frame)
+    _render_alert_detail(client, detail, frame)
 
 
-def _render_alert_detail(alert: dict[str, Any], all_alerts: pd.DataFrame) -> None:
+def _render_alert_detail(
+    client: SOCAPIClient,
+    alert: dict[str, Any],
+    all_alerts: pd.DataFrame,
+) -> None:
     """Render one alert's evidence, explanation, and analyst workflow."""
 
     st.divider()
@@ -207,6 +212,8 @@ def _render_alert_detail(alert: dict[str, Any], all_alerts: pd.DataFrame) -> Non
             key=f"notes_{alert['alert_id']}",
         )
         st.caption("Checklist and notes are session-local in the current hackathon build.")
+
+    render_ai_investigation(client, str(alert["alert_id"]))
 
     related = all_alerts[all_alerts["entity_id"] == alert["entity_id"]].copy()
     section_header(

@@ -13,7 +13,11 @@ from behavioral_security.application.pipeline import (
     train_and_evaluate,
 )
 from behavioral_security.application.training_config import load_training_config
-from behavioral_security.infrastructure.config.settings import IntelligenceSettings, Settings
+from behavioral_security.infrastructure.config.settings import (
+    IntelligenceSettings,
+    InvestigationSettings,
+    Settings,
+)
 
 PROJECT_ROOT = Path(__file__).resolve().parents[3]
 
@@ -58,7 +62,8 @@ def test_training_evaluation_and_inference_pipeline(
                 metrics_path=result.metrics_path,
                 alert_threshold=55.0,
                 replay_interval_ms=0,
-            )
+            ),
+            "investigation": InvestigationSettings(provider="template"),
         }
     )
     with TestClient(create_app(api_settings)) as client:
@@ -87,6 +92,23 @@ def test_training_evaluation_and_inference_pipeline(
         assert detail["recommended_actions"]
         assert "cold_start" in detail
         assert "drift_status" in detail
+        investigation = client.get(
+            f"/api/v1/alerts/{alerts[0]['alert_id']}/investigation",
+            params={"question": "why_generated"},
+        )
+        assert investigation.status_code == 200
+        investigation_payload = investigation.json()
+        assert investigation_payload["provider"] == "template"
+        assert investigation_payload["summary"]
+        assert investigation_payload["evidence"]["entity"] == detail["entity_id"]
+        assert investigation_payload["recommendations"]
+        assert investigation_payload["timeline"]
+        feedback = client.post(
+            f"/api/v1/alerts/{alerts[0]['alert_id']}/investigation",
+            json={"feedback": "confirmed_threat"},
+        )
+        assert feedback.status_code == 201
+        assert feedback.json()["feedback"] == "confirmed_threat"
         entity = client.get(f"/api/v1/entities/{detail['entity_id']}").json()
         assert "cold_start" in entity
         assert "drift" in entity

@@ -4,6 +4,10 @@ from typing import Annotated
 
 from pydantic import BaseModel, ConfigDict, Field
 
+from behavioral_security.core.models.investigation import InvestigationFeedbackRequest
+
+__all__ = ["InvestigationFeedbackRequest", "ReplayRequest"]
+
 
 class ReplayRequest(BaseModel):
     """Optional controls for a bounded demonstration replay."""

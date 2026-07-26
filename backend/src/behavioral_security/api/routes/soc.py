@@ -4,9 +4,15 @@ from typing import Annotated, Any
 
 from fastapi import APIRouter, Depends, HTTPException, Query, status
 
-from behavioral_security.api.dependencies import get_soc_service
-from behavioral_security.api.schemas.soc import ReplayRequest
+from behavioral_security.api.dependencies import get_investigation_service, get_soc_service
+from behavioral_security.api.schemas.soc import InvestigationFeedbackRequest, ReplayRequest
+from behavioral_security.application.investigation import InvestigationService
 from behavioral_security.application.realtime import RealtimeSOCService
+from behavioral_security.core.enums import AnalystQuestion
+from behavioral_security.core.models.investigation import (
+    InvestigationFeedbackReceipt,
+    InvestigationResponse,
+)
 
 router = APIRouter(tags=["SOC"])
 
@@ -51,6 +57,43 @@ def alert_details(
     if alert is None:
         raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="alert not found")
     return alert
+
+
+@router.get(
+    "/alerts/{alert_id}/investigation",
+    response_model=InvestigationResponse,
+    summary="Get an AI-assisted grounded investigation",
+)
+def alert_investigation(
+    alert_id: str,
+    service: Annotated[InvestigationService, Depends(get_investigation_service)],
+    question: AnalystQuestion = AnalystQuestion.EXECUTIVE_SUMMARY,
+) -> InvestigationResponse:
+    """Return a grounded investigation using only curated alert evidence."""
+
+    investigation = service.investigate(alert_id, question)
+    if investigation is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="alert not found")
+    return investigation
+
+
+@router.post(
+    "/alerts/{alert_id}/investigation",
+    response_model=InvestigationFeedbackReceipt,
+    status_code=status.HTTP_201_CREATED,
+    summary="Store investigation feedback",
+)
+def store_investigation_feedback(
+    alert_id: str,
+    request: InvestigationFeedbackRequest,
+    service: Annotated[InvestigationService, Depends(get_investigation_service)],
+) -> InvestigationFeedbackReceipt:
+    """Persist one append-only analyst feedback disposition."""
+
+    receipt = service.record_feedback(alert_id, request.feedback)
+    if receipt is None:
+        raise HTTPException(status_code=status.HTTP_404_NOT_FOUND, detail="alert not found")
+    return receipt
 
 
 @router.get("/entities/{entity_id}", summary="Get entity profile and history")

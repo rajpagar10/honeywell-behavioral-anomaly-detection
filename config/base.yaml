@@ -32,3 +32,10 @@ intelligence:
   alert_threshold: 55.0
   replay_interval_ms: 100
   recent_limit: 100
+
+investigation:
+  provider: ollama
+  model: llama3.1:8b
+  base_url: http://127.0.0.1:11434
+  timeout_seconds: 3.0
+  retry_cooldown_seconds: 30

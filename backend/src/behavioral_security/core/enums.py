@@ -83,6 +83,26 @@ class AnalystDisposition(StrEnum):
     NEEDS_MORE_INFORMATION = "needs_more_information"
 
 
+class AnalystQuestion(StrEnum):
+    """Grounded questions supported by the Investigation Copilot."""
+
+    EXECUTIVE_SUMMARY = "executive_summary"
+    WHY_GENERATED = "why_generated"
+    ABNORMAL_BEHAVIORS = "abnormal_behaviors"
+    HIGH_RISK_SCORE = "high_risk_score"
+    CONCEPT_DRIFT = "concept_drift"
+    INVESTIGATE_FIRST = "investigate_first"
+
+
+class InvestigationFeedback(StrEnum):
+    """Analyst feedback choices exposed by the investigation workspace."""
+
+    CONFIRMED_THREAT = "confirmed_threat"
+    FALSE_POSITIVE = "false_positive"
+    BENIGN = "benign"
+    NEEDS_INVESTIGATION = "needs_investigation"
+
+
 class ModelFamily(StrEnum):
     """Detection model families used by the model registry."""
 
